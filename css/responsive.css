@@ -158,59 +158,68 @@
   }
 
   .features-nav{
-    height: 450px;
+    height: 650px;
   }
 
   .features-nav li {
     padding: 25px 30px;
   }
 
-  .service-media {
-    padding-left: 0;
-    padding-top: 30px;
-  }
+  #services .service-media {
+   padding: 30px;
+   height: auto;
+   margin-bottom: 15px;
+ }
 
-  .service-media img {
-    padding-right: 15px;
-    padding-top: 5px;
-    padding-left: 15px;
-    margin-right: 0 !important;
-  }
+  #services h3{
+   font-size: 18px;
+ }
 
-  .service-media h4 {
-    font-size: 20px;
-    margin-top: 45px;
-  }
+ #services p{
+  font-size: 15px;
+  line-height: 20px;
+ }
 
-  .service-media p {
-    font-size: 15px;
-    line-height: 25px;
-  }
+ #services .media-top img{
+  width: 50px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+ }
 
-  #email-marketing-carousel .carousel-indicators, 
-  #customer-satisfaction-carousel .carousel-indicators, 
-  #support-carousel .carousel-indicators {
-    left: 73%
-  }
+ .service-media h4 {
+  font-size: 20px;
+  margin-top: 45px;
+}
 
-  #portfolio h2,
-  #services h2.title {
-    width: 133px;
-    font-size: 25px
-  }
+.service-media p {
+  font-size: 15px;
+  line-height: 25px;
+}
 
-  #portfolio .portfolio-filter {
-    margin-bottom: 40px;
-    margin-top: 40px;
-    padding: 0;
-  }
+#email-marketing-carousel .carousel-indicators, 
+#customer-satisfaction-carousel .carousel-indicators, 
+#support-carousel .carousel-indicators {
+  left: 73%
+}
 
-  #portfolio .portfolio-filter li a {
-    font-size: 15px;
-    margin-bottom: 1px;
-    width: auto;
-    padding: 10px;
-  }
+#portfolio h2,
+#services h2.title {
+  width: 133px;
+  font-size: 25px
+}
+
+#portfolio .portfolio-filter {
+  margin-bottom: 40px;
+  margin-top: 40px;
+  padding: 0;
+}
+
+#portfolio .portfolio-filter li a {
+  font-size: 15px;
+  margin-bottom: 1px;
+  width: auto;
+  padding: 10px;
+}
 
 /*  .portfolio-items > div{
     width: 49% !important;
@@ -452,7 +461,7 @@
 
   #header .navbar {
     padding: 0 0px;
-}
+  }
 
   .blog-content p{
     font-size: 14px;
@@ -480,14 +489,12 @@
     margin: 0;
   }
 
-  .features-nav .media-content h3,
-  .service-media h3{
+  .features-nav .media-content h3{
     font-size: 22px;
     margin-bottom: 15px;
   }
 
-  .features-nav .media-content p,
-  .service-media p{
+  .features-nav .media-content p{
     font-size: 14px;
     line-height: 24px;
   }
@@ -532,7 +539,7 @@
 
   .portfolio-items .row> div{
     width: 100%;
-   padding: 15px;
+    padding: 15px;
   }
 
   #carousel-blog .left {

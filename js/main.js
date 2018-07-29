@@ -101,6 +101,14 @@ function Scroll() {
 
 // Portfolio Single View
 
+$('.price-list').click(function(){
+	var selectedMetall = $(this).parent().prev().find('p').text().toLowerCase();
+	$('#myModalLabel').text(selectedMetall)
+	$('#myModal table tbody').hide().each(function(){
+		if($(this).data('metall').toLowerCase()==selectedMetall) $(this).show();
+	})
+})
+
 $('#portfolio').on('click','.folio-read-more',function(event){
 	event.preventDefault();
 

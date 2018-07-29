@@ -68,7 +68,11 @@
     z-index: 999;
   }
 
-  .btn{
+  .modal-title{
+    text-transform: capitalize;
+  }
+
+  .btn-success{
     background-color: #da9a00;
     border-color: #da9a00;
     text-transform: uppercase;
@@ -81,7 +85,7 @@
 
   }
   
-  .btn:hover{
+  .btn-success:hover{
     background-color: #efac0a;
     border-color: #efac0a
   }
@@ -891,7 +895,7 @@
 .features-nav .media-content p {
   color: #ccc;
   font-family: roboto;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 300;
   line-height: 33px;
 }
@@ -905,49 +909,59 @@
 
 #services {
   background-image: url("../images/services/service-bg.jpg");
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   position: relative;
 }
 
-#services h2.title{
+#services .service-media{
+  height: 170px;
+}
+
+#services h2.title,
+#suppliers h2.title{
   color: #eee;
   border-color: #eee;
 }
 
-#services h2.title:after{
+#services h2.title:after,
+#suppliers h2.title:after{
   background: #eee;
 }
 
-.media.service-media{
-  margin-bottom: 60px;
+.service-media .media-top{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: flex-end;
+  align-items: flex-end;
 }
 
-.media.service-media img{
-  margin-right:30px;
+
+#services .media-top img{
+    width: 60px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
-.service-media h3{
+#services h3{
   color: #eee;
   font-family: roboto;
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 15px;
 }
 
-.service-media p {
+#services p {
   color: #eee;
   font-family: roboto;
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 300;
   line-height: 30px;
 }
 
-.service-right {
-  padding: 40px 0 0;
-}
-.service-right img {
-  width: 100%
-}
 
 /*************************
 *******Portfolio CSS******
@@ -1341,10 +1355,10 @@
 /*************************
 *******Client Comments******
 **************************/
-#clients .bg-client{
+.bg-client{
   width: 200px;
   height: 200px;
-  background-image: url('../images/team/1.jpg');
+  background-image: url('../images/clients/1.jpg');
   background-size: cover;
   background-position: center;
   border: 3px solid #fff;
@@ -1354,6 +1368,7 @@
   position: relative;
   z-index: 1;
 }
+
 
 #testimonial-carousel 
 .carousel-indicators {
