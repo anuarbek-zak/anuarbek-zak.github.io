@@ -6,7 +6,7 @@
 /* md */
 @media (min-width: 992px) and (max-width: 1199px) {
   #header .navbar-nav.navbar-right >li {
-    padding: 0 15px;
+    padding: 0 10px;
   }
 }
 
@@ -30,8 +30,12 @@
   }
 
   #header .navbar-nav.navbar-right li{
-    padding: 0 10px;
+    padding: 0 8px;
   }
+
+  #header .navbar {
+  padding: 0 20px
+}
 
   #header .navbar-nav.navbar-right >li a {
     font-size: 13px;

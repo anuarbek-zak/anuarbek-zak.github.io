@@ -7,13 +7,44 @@ jQuery(function($) {'use strict',
 	});
 	function parallaxInit() {
 		
-			$("#services").parallax("50%", 0.3);
-			$("#promotion").parallax("50%", 0.3);
-			$("#promotion-two").parallax("50%", 0.3);
-			$("#testimonial").parallax("50%", 0.3);
+		$("#services").parallax("50%", 0.3);
+		$("#promotion").parallax("50%", 0.3);
+		$("#promotion-two").parallax("50%", 0.3);
+		$("#testimonial").parallax("50%", 0.3);
 		
 	}	
 	parallaxInit();	
+
+	$("#sendToMail").click(function (e) {
+		e.preventDefault();
+		var data = {};
+		var name = $("#clientName").val();
+		var phone = $("#clientPhone").val();
+		if(name==""||phone=="") {
+			$(".error").show();
+			return;
+		}
+		data.setFrom = 'info.bt@bk.ru';
+		data.addAddress = 'almira9090@bk.ru';
+		data.subject = 'Письмо с сайта';
+		data.username = "info.bt@bk.ru";
+		data.password = "rls5n84a";
+		data.msg = "Пришла завяка с сайта от "+name+" с номером "+phone;
+
+		$.ajax({
+			type: 'POST',
+			url: './phpmailer/mailer.php',
+			data: data,
+			success: function(data) {
+			},
+			error: function(xhr, status, error) {
+			}
+		});
+
+		$(".modal-body").hide();
+		$(".congrats").show();
+		return false;
+	});
 
 	// Feature Tab Content
 	$('.features-nav li').on('click',function(){'use strict',
@@ -69,10 +100,10 @@ jQuery(window).load(function(){'use strict';
 	});
 	
 	var div 		= $('.image-slideshow li div'),
-		divHeight 	= div.height(),
-		winHeight 	= $(window).height(),
-		divTop 		= (winHeight - divHeight)/2;
-		div.css('top',divTop+'px');
+	divHeight 	= div.height(),
+	winHeight 	= $(window).height(),
+	divTop 		= (winHeight - divHeight)/2;
+	div.css('top',divTop+'px');
 
 });
 
@@ -114,9 +145,9 @@ $('#portfolio').on('click','.folio-read-more',function(event){
 
 	var link = $(this).data('single_url');
 	var full_url = '#portfolio-single-wrap',
-		parts = full_url.split("#"),
-		trgt = parts[1],
-		target_top = $("#"+trgt).offset().top;
+	parts = full_url.split("#"),
+	trgt = parts[1],
+	target_top = $("#"+trgt).offset().top;
 
 	$('html, body').animate({scrollTop:target_top}, 1200);
 	$('#portfolio-single').slideUp(1000, function(){
@@ -129,10 +160,10 @@ $('#portfolio').on('click','.folio-read-more',function(event){
 // Close Portfolio Single View
 $('#portfolio-single-wrap').on('click','.close-folio-item',function(){
 	var full_url = '#portfolio',
-		parts = full_url.split("#"),
-		trgt = parts[1],
-		target_offset = $("#"+trgt).offset(),
-		target_top = target_offset.top;
+	parts = full_url.split("#"),
+	trgt = parts[1],
+	target_offset = $("#"+trgt).offset(),
+	target_top = target_offset.top;
 
 	$('html, body').animate({scrollTop:target_top}, 1400);
 

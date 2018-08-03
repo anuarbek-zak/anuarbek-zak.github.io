@@ -265,10 +265,10 @@
 **************************/
 
 #header .navbar {
-  background: rgba(0,0,0,.6);
   border-radius: 0;
   border-bottom: 0;
-  padding: 0 50px
+  padding: 0 50px;
+  border-bottom: 3px solid #ebb430;
 }
 
 #header .navbar-toggle{
@@ -281,7 +281,7 @@
 }
 
 #header .navbar-brand img {
-  width: 80px;
+  width: 70px;
 }
 
 #header .navbar-nav.navbar-right >li {
@@ -299,7 +299,7 @@
 
 #header .navbar-nav.navbar-right >li a {
   color: #FFFFFF;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 46px;
   padding: 15px 0;
   text-transform: capitalize;
@@ -311,9 +311,6 @@
 #header .navbar-nav.navbar-right li > a:hover,
 .navbar-inverse .navbar-nav > .open > a {
   background-color: inherit;
-  border-width:0 0 3px 0;
-  border-style:  solid;
-  border:;
 }
 
 #header .navbar-nav.navbar-right >li:last-child a{
@@ -1036,7 +1033,7 @@
 
 .view {  
   cursor: default;
-  height: 100%;
+  height: 320px;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -1069,6 +1066,17 @@
   background-image: url("../images/portfolio/overlay-bg.png");
   transition:all 0.5s linear 0s;
   opacity: 0
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-image .bg-img{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
 }
 
 .view .mask, .view .content {
@@ -1218,7 +1226,7 @@
 }
 
 .team-member .member-photo{
-  background-image: url('../images/team/1.jpg');
+  background-image: url('../images/team/1.png');
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -1692,6 +1700,10 @@ ul.plan li.plan-content span {
   width: 50%
 }
 
+#contact .form-group{
+  margin-bottom: 30px;
+}
+
 .additional-info{
   margin: 20px 0;
   margin-left: 15%;
@@ -1704,7 +1716,7 @@ ul.plan li.plan-content span {
   float: right;
   width: 50%;
   z-index: 1;
-  height:700px;
+  height:600px;
 }
 
 #gmap {
