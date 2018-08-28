@@ -79,9 +79,9 @@
         <input class="city-from" type="text" placeholder="Алматы, ALA"
         ><button class="city-swap"><i class="fa fa-exchange"></i></button><input class="city-to" type="text"  placeholder="Куда?"
         ><datepicker class="date-1">
-        <input ng-model="''" placeholder="Дата туда"  type="text"/>
+        <input  placeholder="Дата туда"  type="text"/>
         </datepicker><datepicker  class="date-2">
-        <input ng-model="''" disabled="true" placeholder="Дата обратно"  type="text"/>
+        <input  ng-disabled="vm.currentTab!=1" placeholder="Дата обратно"  type="text"/>
         </datepicker><input class="passengers" type="text"  placeholder="6 пассажиров"
       ><button class="submit btn w-10"><i class="fa fa-search"></i></button>
     </form>
