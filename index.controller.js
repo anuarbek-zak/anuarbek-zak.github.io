@@ -1,4 +1,4 @@
-angular.module('myApp').controller('mainCtrl',function ($http,$scope) {
+angular.module('myApp').controller('mainCtrl',['$http','$scope',function ($http,$scope) {
 	var vm = this;
 	vm.months = ['январь','февраль','март','апрель','май','июнь','июль','август','сентябрь','октябрь','ноябрь','декабрь'];
 	vm.ticketTypes = ['авиабилеты','ж/д билеты','отели'];
@@ -65,4 +65,4 @@ angular.module('myApp').controller('mainCtrl',function ($http,$scope) {
 	vm.searchTickets()
 
 	
-});
+}]);
