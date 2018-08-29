@@ -181,7 +181,7 @@
       <div class="col-md-6 tickets d-flex flex-column">
         <div data-ng-if="vm.oneWayFirstColumn.length" data-ng-repeat="ticket in vm.oneWayFirstColumn" class="ticket row d-flex justify-content-between align-items-center">
           <div class="col-5 d-flex align-items-center">
-            <img class="airlines-logo" ng-src="{{ticket.airline.logo}}" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
+            <img class="airlines-logo" src="{{ticket.airline.logo}}" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
             билеты на самолет Алматы — Стамбул по низким ценам онлайн">
             <div>
               <p>{{ticket.departure_date | date :'MMM d'}}</p>
@@ -202,7 +202,7 @@
       <div class="col-md-6 tickets d-flex flex-column">
         <div data-ng-if="vm.oneWaySecondColumn.length" data-ng-repeat="ticket in vm.oneWaySecondColumn" class="ticket row d-flex justify-content-between align-items-center">
           <div class="col-5 d-flex align-items-center">
-            <img class="airlines-logo" ng-src="{{ticket.airline.logo}}" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
+            <img class="airlines-logo" src="{{ticket.airline.logo}}" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
             билеты на самолет Алматы — Стамбул по низким ценам онлайн">
             <div>
               <p>{{ticket.departure_date | date :'MMM d'}}</p>
@@ -232,7 +232,7 @@
     <div class="col-md-6 tickets d-flex flex-column">
       <div data-ng-if="vm.roundTripFirstColumn.length" data-ng-repeat="ticket in vm.roundTripFirstColumn" class="ticket row d-flex justify-content-between align-items-center">
         <div class="col-5 d-flex align-items-center">
-          <img class="airlines-logo" ng-src="{{ticket.airline.logo}}" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
+          <img class="airlines-logo" src="{{ticket.airline.logo}}" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
           билеты на самолет Алматы — Стамбул по низким ценам онлайн">
           <div>
             <p>{{ticket.departure_date | date :'MMM d'}}</p>
@@ -253,7 +253,7 @@
     <div class="col-md-6 tickets d-flex flex-column">
       <div data-ng-if="vm.roundTripSecondColumn.length" data-ng-repeat="ticket in vm.roundTripSecondColumn" class="ticket row d-flex justify-content-between align-items-center">
         <div class="col-5 d-flex align-items-center">
-          <img class="airlines-logo" ng-src="{{ticket.airline.logo}}" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
+          <img class="airlines-logo" src="{{ticket.airline.logo}}" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
           билеты на самолет Алматы — Стамбул по низким ценам онлайн">
           <div>
             <p>{{ticket.departure_date | date :'MMM d'}}</p>
@@ -443,7 +443,7 @@
     
     <div data-ng-repeat="airline in vm.airlines" class="row d-flex justify-content-between align-items-center mt-4">
       <div class="col-md-3">
-        <img class="airlines-logo" ng-src="{{airline.logo}}" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
+        <img class="airlines-logo" src="{{airline.logo}}" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
         билеты на самолет Алматы — Стамбул по низким ценам онлайн">
         <a href="">{{airline.title}}</a>
       </div>
