@@ -55,9 +55,10 @@ angular.module('myApp').controller('mainCtrl',function ($http,$scope) {
 			autoUpdateInput: false,
 		}, function(start, end, label) {
 			vm.date1 = start.format('YYYY-MM-DD');
-			vm.date2 = end.format('YYYY-MM-DD');
-			    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-			    $scope.$apply()
+			if(vm.currentTab==1)	vm.date2 = end.format('YYYY-MM-DD');
+			else vm.date2 = ''
+				console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+			$scope.$apply()
 		});
 	});
 
