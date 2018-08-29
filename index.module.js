@@ -1,1 +1,1 @@
-var myApp = angular.module('myApp', ['720kb.datepicker']);
+var myApp = angular.module('myApp', ['mgcrea.ngStrap']);

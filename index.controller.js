@@ -4,13 +4,49 @@ angular.module('myApp').controller('mainCtrl',function ($http,$scope) {
 	vm.ticketTypes = ['авиабилеты','ж/д билеты','отели'];
 	vm.tabs = ['В одну сторону','В обе стороны','Сложный маршрут'];
 	vm.currentTicketType = vm.currentTab = 0;
+	vm.cities = [{name:'Алматы',code:'ALA'},{name:'Стамбул',code:'IST'},{name:'Астана',code:'TSE'},{name:'Костанай',code:'KSN'},{name:'Москва',code:'MOW'}]
+	vm.cityFrom = vm.cities[0];
+	vm.cityTo = vm.cities[1];
+	vm.mainData = {};
+	vm.peopleCount = 0;
+	vm.peoples = [1,2,3,4,5,6,7]
 
+	vm.searchTickets = function(){
+		$http.get("http://test.santufei.com/api/v1/content/directions?city_a="+vm.cityFrom.code+"&city_b="+vm.cityTo.code)
+		.then(function(response) {
+			vm.directions = response.data.directions[0]
+			console.log(vm.directions);
+			vm.oneWayFirstColumn = vm.directions.oneway_histories.slice(0,5)
+			vm.oneWaySecondColumn = vm.directions.oneway_histories.slice(5)
+			vm.roundTripFirstColumn = vm.directions.roundtrip_histories.slice(0,5)
+			vm.roundTripSecondColumn = vm.directions.roundtrip_histories.slice(5)
+			vm.airlines = vm.directions.airlines
+		},function(err){
+			console.log('err',err)
+		});
+	}
 
-	$http.get("https://santufei.com/api/v1/content/directions/?city_a=ALA&city_b=IS")
-	.then(function(response) {
-		console.log('resp',response)
-	},function(err){
-				console.log('err',err)
+	vm.priceConvertion = function(val){
+		return String(val).replace(/(\d)(?=(\d{3})+([^\d]|$))/g, '$1 ');
+	}
 
-	});
+	vm.timeConversion = function(duration) {
+		return (duration/60).toFixed(0)+'ч '+(duration%60)+"м"
+	}
+
+	vm.stopsFormat = function(stops){
+		return stops?stops+' пересадка':'без пересадок'
+	}
+
+	vm.trunkName = function(name){
+		return name.length>15?name.slice(0,12)+"...":name;
+	}
+
+	vm.choosePeople = function(val){
+		vm.peopleCount += val;
+	}
+
+	vm.searchTickets()
+
+	
 });
