@@ -8,8 +8,10 @@ angular.module('myApp').controller('mainCtrl',function ($http,$scope) {
 	vm.cityFrom = vm.cities[0];
 	vm.cityTo = vm.cities[1];
 	vm.mainData = {};
-	vm.peopleCount = 0;
-	vm.peoples = [1,2,3,4,5,6,7]
+	vm.peopleCount = '';
+	vm.peoples = [1,2,3,4,5,6,7];
+	vm.date1 = ''
+	vm.date2 = ''
 
 	vm.searchTickets = function(){
 		$http.get("http://test.santufei.com/api/v1/content/directions?city_a="+vm.cityFrom.code+"&city_b="+vm.cityTo.code)
@@ -42,9 +44,22 @@ angular.module('myApp').controller('mainCtrl',function ($http,$scope) {
 		return name.length>15?name.slice(0,12)+"...":name;
 	}
 
-	vm.choosePeople = function(val){
-		vm.peopleCount += val;
+	vm.choosePeople = function(){
+		if(!vm.peopleCount) vm.peopleCount=0;
+		vm.peopleCount += 1;
 	}
+
+	$(function() {
+		$('#datepicker').daterangepicker({
+			opens: 'center',
+			autoUpdateInput: false,
+		}, function(start, end, label) {
+			vm.date1 = start.format('YYYY-MM-DD');
+			vm.date2 = end.format('YYYY-MM-DD');
+			    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+			    $scope.$apply()
+		});
+	});
 
 	vm.searchTickets()
 
