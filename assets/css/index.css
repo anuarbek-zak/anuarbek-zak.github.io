@@ -89,7 +89,8 @@ h2{
 	padding-top: 7px;
 	margin-left: 30px;
 }
-.navbar .toggle p{
+.navbar .toggle span{
+	display: block;
 	width: 30px;
 	border: 1px solid #fff;
 	margin-bottom: 7px;
