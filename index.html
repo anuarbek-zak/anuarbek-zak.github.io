@@ -100,7 +100,7 @@
           <form class="form-group d-flex flex-wrap flex-lg-nowrap">
             <div class="d-flex city-from">
              <input class="city-from-name" data-ng-model="vm.cityFrom" data-bs-options="city.name for city in vm.cities" data-bs-typeahead type="text" placeholder="Алматы, ALA">
-             <input type="button" value="" class="city-swap">
+             <input type="button" value=" " class="city-swap">
            </div>
            <input data-ng-model="vm.cityTo" data-bs-options="city.name for city in vm.cities" data-bs-typeahead  class="city-to" type="text"  placeholder="Куда?">
            <div id="datepicker" class="datepicker d-flex">
@@ -113,7 +113,7 @@
              <li><a data-ng-click="vm.choosePeople(2)"><i class="fa fa-child"></i>&nbsp;Дети</a></li>
              <li><a data-ng-click="vm.choosePeople(3)"><i class="fa fa-user"></i>&nbsp;Младенцы</a></li>
            </ul>
-           <input type="button" value="" data-ng-click="vm.searchTickets()" class="submit btn w-10 d-none d-sm-block">
+           <input type="button" value=" " data-ng-click="vm.searchTickets()" class="submit btn w-10 d-none d-sm-block">
            <button data-ng-click="vm.searchTickets()" class="submit btn w-10 d-sm-none">Найти рейсы</button>
          </form>
        </div>
