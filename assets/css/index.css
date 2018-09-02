@@ -1,5 +1,8 @@
-[ng-cloak]{
-	display: none;
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+html{
+	font-size: 16px;
 }
 
 body{
@@ -19,7 +22,7 @@ ul{
 }
 h1{
 	margin: 30px 0 10px;
-	font-size: 32px;
+	font-size: 2rem;
 }
 section{
 	padding: 55px 0px;
@@ -31,9 +34,15 @@ a:hover{
 	color: #0077bf;
 }
 h2{
-	font-size: 32px;
+	font-size: 2rem;
 	color: #545a5c;
 	margin-bottom: 8px;
+}
+.col-18{
+	width: 18%;
+}
+.col-26{
+	width: 26%;
 }
 .top-scroll{
 	position: fixed;
@@ -76,7 +85,20 @@ h2{
 .navbar{
 	padding: 0;
 }
-.btn-reverse{
+.navbar .toggle{
+	padding-top: 7px;
+	margin-left: 30px;
+}
+.navbar .toggle p{
+	width: 30px;
+	border: 1px solid #fff;
+	margin-bottom: 7px;
+}
+.navbar .fa-user{
+	font-size: 25px;
+}
+
+.btn-inv{
 	width: 88px;
 	text-align: center;
 	border: 1px solid #fff;
@@ -95,18 +117,22 @@ h2{
 	text-decoration: none !important;
 }
 h1~p{
-	font-size: 22px;
-}
-.ticket-types{
-	margin-top: 42px;
+	font-size: 1.375rem;
+	margin-bottom: 42px;
 }
 .ticket-types button{
 	padding: 11px 24px;
 	text-transform: uppercase;
 	background-color: transparent;
-	font-size: 15px;
+	font-size: 0.9375rem;
 	border: 1px solid #fff;
 	font-weight: 600;
+}
+.ticket-types button:first-child{
+	border-radius: 3px 0 0 3px
+}
+.ticket-types button:last-child{
+	border-radius: 0px 3px 3px 0px
 }
 .ticket-types button:hover,
 .ticket-types button.active{
@@ -117,7 +143,7 @@ h1~p{
 }
 .search .tabs li{
 	margin:25px 25px 0 10px ;
-	font-size: 16px;
+	font-size: 1rem;
 	padding-bottom: 3px;
 	cursor: pointer;
 }
@@ -135,54 +161,63 @@ h1~p{
 	padding: 17px;
 	background-color: rgba(0,0,0,.8);
 	border-radius: 3px;
+	font-size: 0;
 }
 .search form input{
+	font-size: 1rem;
 	padding: 10px;
 	border: 1px solid #ccc;
 	outline: none;
 	width: 100%;
-	height: 100%;
-}
-.search form .date-1,
-.search form .date-2{
-	background-image: url(../images/calendar_selected.svg);
-	background-repeat: no-repeat;
-	background-position: 90% center
 }
 
-.search form .date-2:disabled{
+.search .datepicker{
+	width: 29%;
+}
+
+.search .date-1,
+.search .date-2{
+	background-image: url(../images/calendar_selected.svg);
+	background-repeat: no-repeat;
+	background-position: 90% center;
+	display: inline-block;
+	width: 50%;
+}
+
+.search .date-2:disabled{
 	background-image: url(../images/calendar.svg);
 }
-.search form .city-swap{
+.search .city-swap{
 	width: 40px;
-	font-size: 20px;
-	color: #fb7b4c;
 	background-color: #fff;
 	border: none;
 	padding-right: 10px;
 	outline: none;
+	cursor: pointer;
+	background-image: url(../images/swap.svg);
+	background-position:center;
+	background-repeat: no-repeat;
 }
-.search form .submit{
+.search .submit{
 	background-color: #fb7b4c;
 	width:70px;
 	border-radius: 0px 3px 3px 0;
+	border: none;
+	background-image: url(../images/search.svg);
+	background-position:center;
+	background-repeat: no-repeat;
 }
-.search form .city-from{
-	border-radius: 3px 0 0 3px
-}
-.search form .city-from{
-	width: 200px;
+.search .city-from input{
 	border-right: 0;
 }
-.search form .city-to{
-	width: 240px;
+.search .city-from,
+.search .city-to
+{
+	width: 22.282%;
 }
-.search form .date-1,
-.search form .date-2{
-	width: 168px;
-}
-.search form .passengers{
-	width: 220px;
+
+.search .passengers{
+	width: 19.817%;
 }
 .s2{
 	color: #858585;
@@ -213,7 +248,7 @@ h1~p{
 .direction-detail__weight600 {
 	font-weight: 600;
 }
-.direction-detail__direction-map-content .table td {
+.direction-detail .table td {
 	padding: 13px;
 	line-height: 1.42857143;
 	vertical-align: top;
@@ -221,14 +256,22 @@ h1~p{
 	text-align: left;
 	border: 1px solid #ddd;
 	background: #fff;
+	width: 33.3%;
 	padding-left: 15px!important;
+}
+.direction-detail .table tr{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
 }
 .direction-map__small-text--grey {
 	color: #858585;
 }
 .s5 h3,
 .s6 h3{
-	font-size: 16px;
+	font-size: 1rem;
 	margin: 11px 0 39px 0
 }
 .tickets{
@@ -251,7 +294,7 @@ h1~p{
 	margin-bottom: -0px;
 }
 .ticket span{
-	font-size: 14px;
+	font-size: 0.875rem;
 }
 .ticket span{
 	color: #858585;
@@ -267,7 +310,8 @@ h1~p{
 }
 
 .s7{
-	padding: 50px 0 93px 0
+	padding: 50px 0 93px 0;
+	overflow: hidden;
 }
 
 .s7 h2{
@@ -276,23 +320,25 @@ h1~p{
 .s7 .today,
 .s7 .months,
 .s7 .other-days{
-	font-size: 13px;
+	font-size: 0.8125rem;
 	color: #858585;
 	border-radius: 3px;
 	background-color: #fff;
 	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
-.s7 .day{
-	width: 135px;
+.s7 .other-days{
+	width: 840px;
 }
 
 .s7 .today{
 	width: 270px;
+	margin-right: 30px;
 }
 .s7 .other-days .day{
 	border: 1px solid  #dddddd;
 	text-align: center;
+	width: 16.7%;
 }
 
 .s7 .day .body,
@@ -301,7 +347,7 @@ h1~p{
 }
 
 .s7 .day .header span{
-	font-size: 16px;
+	font-size: 1rem;
 	color: #303030;
 	text-transform: uppercase;
 }
@@ -311,7 +357,7 @@ h1~p{
 }
 
 .s7 .day .temp-now{
-	font-size: 32px;
+	font-size: 2rem;
 	color: #303030;
 	margin-left: 15px;
 }
@@ -350,20 +396,24 @@ h1~p{
 
 .s7 .day .footer span{
 	color: #303030;
-	font-size: 18px;
+	font-size: 1.125rem;
 }
 .s7 .other-days .day .footer span{
-	font-size: 22px;
+	font-size: 1.375rem;
 }
 .s7 .months span{
 	color: #303030;
-	font-size: 22px;
+	font-size: 1.375rem;;
 }
 .s7 .months{
 	margin-top: 31px;
+		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+
 }
 .s7 .month{
 	height: 70px;
+	width: 95px;
+	background-color: #fff;
 	border-right: 1px solid #dddddd;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -390,14 +440,14 @@ h1~p{
 	background-color: #0077bf;
 }
 .s9 h3{
-	font-size: 17px;
+	font-size: 1.06rem;
 	font-weight: 600;
 	margin-top: 40px;
 }
 .s9	.city-code{
 	display: block;
 	color: #858585;
-	font-size: 13px;
+	font-size: 0.8125rem;
 }
 .s9 .airport{
 	padding: 16px 0;
@@ -409,16 +459,19 @@ h1~p{
 .s9 p{
 	margin-bottom: 0;
 }
-.s10 form input{
+.s10 form{
+	display: table;
+}
+.s10 form input[type="text"]{
 	border: 1px solid #dddddd;
 	padding: 10px;
 	margin-right: 15px;
 	border-radius: 3px;
 	height: 40px;
 	width: 285px;
-
 }
-.s10 form button{
+
+.s10 form .subscribe{
 	background-color:  #fb7b4c;
 	color: #fff;
 	height: 40px;
@@ -428,18 +481,24 @@ h1~p{
 .s10 .socials img{
 	margin-right: 20px;
 }
+.s10 .socials a:last-child img{
+	margin-right: 0;
+}
 .s11{
 	padding: 30px 0
 }
 .s11 .download img{
 	margin: 15px;
 }
+.s11 .download .playmarket{
+	margin-right: 0;
+}
 .s12{
 	padding: 25px 0;
 }
 .s12 a{
 	color: #858585;
-	font-size: 13px;
+	font-size: 0.8125rem;
 }
 .s12 a:hover{
 	color: #303030;
@@ -453,7 +512,7 @@ h1~p{
 footer{
 	padding: 30px 0;
 	color: #858585;
-	font-size: 15px;
+	font-size: 0.9375rem;
 }
 footer p{
 	margin-bottom: 0;
@@ -461,10 +520,4 @@ footer p{
 footer li{
 	margin-left: 70px;
 	display: inline-block;
-}
-
-@media (min-width: 1200px){
-	.container {
-		max-width: 1170px;
-	}
 }

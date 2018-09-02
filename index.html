@@ -19,11 +19,18 @@
   <meta property="og:image"              content="./assets/images/logo-white.svg" />
 
   <link rel="shortcut icon" type="image/png" href="assets/images/favicon_96.png" sizes="96x96">
+
   <link rel="stylesheet" href="assets/css/styles.min.css">
+<!--   <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.css">
+  <link rel="stylesheet" href="bower_components/daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/responsive.css"> -->
 </head>
 
 <body >
-  <div class="top-scroll" >
+  <div class="top-scroll">
     <img src="assets/images/top.svg" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
     билеты на самолет Алматы — Стамбул по низким ценам онлайн">
   </div>
@@ -39,78 +46,82 @@
               билеты на самолет Алматы — Стамбул по низким ценам онлайн">
             </a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
-            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+            <div class="d-flex align-items-center d-lg-none">
+              <button href="" class="btn btn-inv d-none d-sm-block">Войти</button>
+              <i class="d-block d-sm-none fa fa-user"></i>
+              <button class="toggle">
+                <p></p>
+                <p></p>
+                <p></p>
+              </button>
+            </div>
 
-          <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav ml-auto bold text-center">
-              <li class="nav-item">
-                <a class="nav-link"  href="#">О нас</a>
-              </li>
-              <li class="nav-item" >
-              <a class="nav-link" href="#">Новости</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Помощь</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Для бизнеса</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Контакты</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link btn-reverse" href="#">Войти</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>  
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav ml-auto bold text-center">
+                <li class="nav-item">
+                  <a class="nav-link"  href="#">О нас</a>
+                </li>
+                <li class="nav-item" >
+                  <a class="nav-link" href="#">Новости</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Помощь</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Для бизнеса</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Контакты</a>
+                </li>
+                <li class="nav-item d-none d-lg-inline-block">
+                  <button href="" class="btn btn-inv">Войти</button>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </header>  
 
-      <div itemscope class="descr text-center">
-        <h1  itemprop="name">Дешевые авиабилеты Алматы - Стамбул</h1>
-        <p  itemprop="hint">Заполните форму, чтобы найти билет:</p> 
-      </div>
-
-      <div class="ticket-types">
-        <button data-ng-click="vm.currentTicketType=$index" data-ng-class="{'active':vm.currentTicketType==$index}" data-ng-repeat="type in vm.ticketTypes">{{type}}</button>
-      </div>
-
-      <div class="search">
-        <div class="d-flex justify-content-between align-items-center">
-          <ul class="tabs d-flex">
-            <li data-ng-repeat="tab in vm.tabs" data-ng-click="vm.currentTab=$index" data-ng-class="{'active':vm.currentTab==$index}">{{tab}}</li>
-          </ul>
-          <button class="search-history">История поиска <i class="fa fa-clock-o"></i></button>
+        <div itemscope class="descr text-center">
+          <h1  itemprop="name">Дешевые авиабилеты Алматы - Стамбул</h1>
+          <p  itemprop="hint">Заполните форму, чтобы найти билет:</p> 
         </div>
-        <form class="form-group d-flex">
-          <div class="d-flex">
-           <input data-ng-model="vm.cityFrom" data-bs-options="city.name for city in vm.cities" data-bs-typeahead class="city-from" type="text" placeholder="Алматы, ALA"
-           ><button class="city-swap"><i class="fa fa-exchange"></i></button
-           >
-           </div
-           ><input data-ng-model="vm.cityTo" data-bs-options="city.name for city in vm.cities" data-bs-typeahead  class="city-to" type="text"  placeholder="Куда?"
-           ><div id="datepicker"><input data-ng-model="vm.date1" class="date-1"  placeholder="Дата туда"  type="text"
-           ><input class="date-2" data-ng-disabled="vm.currentTab!=1" data-ng-model="vm.date2" placeholder="Дата обратно"  type="text"
-           ></div><input data-ng-model="vm.peopleCount" data-bs-dropdown aria-haspopup="true" aria-expanded="false" class="passengers" type="text"  placeholder="6 пассажиров"
-           ><ul class="dropdown-menu" role="menu">
-           <li><a data-ng-click="vm.choosePeople(1)"><i class="fa fa-male"></i>&nbsp;Взрослые</a></li>
-           <li><a data-ng-click="vm.choosePeople(2)"><i class="fa fa-child"></i>&nbsp;Дети</a></li>
-           <li><a data-ng-click="vm.choosePeople(3)"><i class="fa fa-user"></i>&nbsp;Младенцы</a></li>
 
-           </ul
-           ><button data-ng-click="vm.searchTickets()" class="submit btn w-10"><i class="fa fa-search"></i></button>
+        <div class="ticket-types  d-md-none d-lg-block">
+          <button data-ng-click="vm.currentTicketType=$index" data-ng-class="{'active':vm.currentTicketType==$index}" data-ng-repeat="type in vm.ticketTypes">{{type}}</button>
+        </div>
 
+        <div class="search">
+          <div class="d-flex justify-content-between align-items-center">
+            <ul class="tabs d-flex justify-content-between">
+              <li data-ng-repeat="tab in vm.tabs" data-ng-click="vm.currentTab=$index" data-ng-class="{'active':vm.currentTab==$index}">{{tab}}</li>
+            </ul>
+            <button class="search-history">История поиска <i class="fa fa-clock-o"></i></button>
+          </div>
+          <form class="form-group d-flex flex-wrap flex-lg-nowrap">
+            <div class="d-flex city-from">
+             <input class="city-from-name" data-ng-model="vm.cityFrom" data-bs-options="city.name for city in vm.cities" data-bs-typeahead type="text" placeholder="Алматы, ALA">
+             <input type="button" class="city-swap">
+           </div>
+           <input data-ng-model="vm.cityTo" data-bs-options="city.name for city in vm.cities" data-bs-typeahead  class="city-to" type="text"  placeholder="Куда?">
+           <div id="datepicker" class="datepicker d-flex">
+             <input data-ng-model="vm.date1" class="date-1"  placeholder="Дата туда"  type="text">
+             <input class="date-2" data-ng-disabled="vm.currentTab!=1" data-ng-model="vm.date2" placeholder="Дата обратно"  type="text">
+           </div>
+           <input data-ng-model="vm.peopleCount" data-bs-dropdown aria-haspopup="true" aria-expanded="false" class="passengers" type="text"  placeholder="6 пассажиров">
+           <ul class="dropdown-menu" role="menu">
+             <li><a data-ng-click="vm.choosePeople(1)"><i class="fa fa-male"></i>&nbsp;Взрослые</a></li>
+             <li><a data-ng-click="vm.choosePeople(2)"><i class="fa fa-child"></i>&nbsp;Дети</a></li>
+             <li><a data-ng-click="vm.choosePeople(3)"><i class="fa fa-user"></i>&nbsp;Младенцы</a></li>
+           </ul>
+           <input type="button" data-ng-click="vm.searchTickets()" class="submit btn w-10 d-none d-sm-block">
+           <button data-ng-click="vm.searchTickets()" class="submit btn w-10 d-sm-none">Найти рейсы</button>
          </form>
        </div>
      </div>
    </div>
 
    <div class="s2 bg-gray">
-     <mighty-datepicker data-ng-model="date" options="options"></mighty-datepicker>
-     <ul class="container d-flex">
+     <ul class="container d-flex d-sm-none">
       <li class="active">Информация о перелете</li>
       <li>Карта маршрута</li>
       <li>Стоимость авиабилетов</li>
@@ -142,7 +153,7 @@
   <section class="s4 bg-gray">
     <div class="container">
       <h2 itemprop="name" content="Авиабилеты на перелёт Алматы – Стамбул">Карта маршрута Алматы — Стамбул</h2>
-      <div class="direction-detail__direction-map-content"><map-directions coordinates="directionDetailCtrl.directionsCoordinates" directions="directionDetailCtrl.directionInfo" class="data-ng-isolate-scope"><div class="map__wrapper"><div id="map_canvas" style="height: 400px; width: 100%; position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"><div tabindex="0" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: pan-x pan-y;"><div style="z-index: 1; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -145, -235);"><div style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 30;"><div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -145, -235);"><div style="width: 256px; height: 256px; position: absolute; left: 256px; top: 256px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -512px; top: 256px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -512px; top: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 512px; top: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 512px; top: 256px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 0px; top: 256px;"><canvas width="256" height="256" draggable="false" style="width: 256px; height: 256px; user-select: none; position: absolute; left: 0px; top: 0px;"></canvas></div><div style="width: 256px; height: 256px; position: absolute; left: -256px; top: 256px;"><canvas width="256" height="256" draggable="false" style="width: 256px; height: 256px; user-select: none; position: absolute; left: 0px; top: 0px;"></canvas></div><div style="width: 256px; height: 256px; position: absolute; left: -256px; top: 0px;"><canvas width="256" height="256" draggable="false" style="width: 256px; height: 256px; user-select: none; position: absolute; left: 0px; top: 0px;"></canvas></div><div style="width: 256px; height: 256px; position: absolute; left: 0px; top: 0px;"><canvas width="256" height="256" draggable="false" style="width: 256px; height: 256px; user-select: none; position: absolute; left: 0px; top: 0px;"></canvas></div><div style="width: 256px; height: 256px; position: absolute; left: 256px; top: 0px;"><canvas width="256" height="256" draggable="false" style="width: 256px; height: 256px; user-select: none; position: absolute; left: 0px; top: 0px;"></canvas></div><div style="width: 256px; height: 256px; position: absolute; left: -768px; top: 256px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -768px; top: 0px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -145, -235);"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -768px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -768px; top: 0px;"></div></div></div><div style="width: 22px; height: 22px; overflow: hidden; position: absolute; left: -340px; top: -1px; z-index: 21;"><img alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
+      <div class="direction-detail"><map-directions coordinates="directionDetailCtrl.directionsCoordinates" directions="directionDetailCtrl.directionInfo" class="data-ng-isolate-scope"><div class="map__wrapper"><div id="map_canvas" style="height: 400px; width: 100%; position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"><div tabindex="0" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: pan-x pan-y;"><div style="z-index: 1; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -145, -235);"><div style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -512px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: 256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 30;"><div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -145, -235);"><div style="width: 256px; height: 256px; position: absolute; left: 256px; top: 256px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -512px; top: 256px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -512px; top: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 512px; top: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 512px; top: 256px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 0px; top: 256px;"><canvas width="256" height="256" draggable="false" style="width: 256px; height: 256px; user-select: none; position: absolute; left: 0px; top: 0px;"></canvas></div><div style="width: 256px; height: 256px; position: absolute; left: -256px; top: 256px;"><canvas width="256" height="256" draggable="false" style="width: 256px; height: 256px; user-select: none; position: absolute; left: 0px; top: 0px;"></canvas></div><div style="width: 256px; height: 256px; position: absolute; left: -256px; top: 0px;"><canvas width="256" height="256" draggable="false" style="width: 256px; height: 256px; user-select: none; position: absolute; left: 0px; top: 0px;"></canvas></div><div style="width: 256px; height: 256px; position: absolute; left: 0px; top: 0px;"><canvas width="256" height="256" draggable="false" style="width: 256px; height: 256px; user-select: none; position: absolute; left: 0px; top: 0px;"></canvas></div><div style="width: 256px; height: 256px; position: absolute; left: 256px; top: 0px;"><canvas width="256" height="256" draggable="false" style="width: 256px; height: 256px; user-select: none; position: absolute; left: 0px; top: 0px;"></canvas></div><div style="width: 256px; height: 256px; position: absolute; left: -768px; top: 256px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -768px; top: 0px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -145, -235);"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -512px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -768px; top: 256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -768px; top: 0px;"></div></div></div><div style="width: 22px; height: 22px; overflow: hidden; position: absolute; left: -340px; top: -1px; z-index: 21;"><img alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
       билеты на самолет Алматы — Стамбул по низким ценам онлайн" src="/images/icons/ic-radio-button-selected.svg" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 22px; height: 22px; border: 0px; padding: 0px; margin: 0px; max-width: none; opacity: 1;"></div><div style="width: 22px; height: 22px; overflow: hidden; position: absolute; left: 207px; top: -36px; z-index: -14;"><img alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
       билеты на самолет Алматы — Стамбул по низким ценам онлайн" src="/images/icons/ic-radio-button-selected.svg" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; width: 22px; height: 22px; border: 0px; padding: 0px; margin: 0px; max-width: none; opacity: 1;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 1; transform: matrix(1, 0, 0, 1, -145, -235);"><div style="position: absolute; left: 0px; top: 256px; width: 256px; height: 256px;"><img draggable="false" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
       билеты на самолет Алматы — Стамбул по низким ценам онлайн" aria-hidden="true" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i4!2i10!3i6!4i256!2m3!1e2!6m1!3e5!2m3!1e0!2sm!3i433137360!3m14!2sru-RU!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0!23i1301875&amp;key=AIzaSyCIfBJ8RTWn-isrM1ujxBy0yigC6M4Vlrg&amp;token=96923" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: 256px; width: 256px; height: 256px;"><img draggable="false" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
@@ -167,104 +178,107 @@
     </div>
   </section>
 
-  <section class="s5">
+  <section data-ng-if="vm.oneWayFirstColumn.length||vm.oneWaySecondColumn.length" class="s5">
     <div class="container">
      <h2>Дешевые авиабилеты Алматы — Стамбул в одну сторону</h2>
      <h3>Цена билета на рейс Алматы – Москва в одну сторону начинается от 40 287 тенге. Самые дешевые авиабилеты в одну сторону, которые находили посетители сайта, мы собрали в таблице. Попробуйте поискать билеты на ту же дату.</h3>
-     <div class="row">
+     <div class="d-flex flex-column flex-lg-row">
 
-      <div class="col-md-6 tickets d-flex flex-column">
-        <div data-ng-if="vm.oneWayFirstColumn.length" data-ng-repeat="ticket in vm.oneWayFirstColumn" class="ticket row d-flex justify-content-between align-items-center">
-          <div class="col-5 d-flex align-items-center">
+      <div class="col-12 col-lg-6 tickets d-flex flex-column">
+        <div data-ng-repeat="ticket in vm.oneWayFirstColumn" class="ticket row d-flex justify-content-between align-items-center">
+          <div class="col-6 col-sm-5 d-flex align-items-center">
             <img class="airlines-logo" src="./" data-ng-src="{{ticket.airline.logo}}" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
             билеты на самолет Алматы — Стамбул по низким ценам онлайн">
-            <div>
+            <div class="d-flex flex-column-reverse flex-sm-column">
               <p>{{ticket.departure_date | date :'MMM d'}}</p>
-              <span>{{vm.trunkName(ticket.airline.name)}}</span>
+              <span class="airlines-title">{{vm.trunkName(ticket.airline.name)}}</span>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-sm-3 transfer">
             <p>{{vm.timeConversion(ticket.flight_time)}}</p>
             <span>{{vm.stopsFormat(ticket.stops)}}</span>
           </div>
-          <div class="col-4">
+          <div class="col-6 col-sm-4 price">
             <p><b>{{vm.priceConvertion(ticket.price)}} KZT</b></p>
             <span>найден 2 дня назад</span>
           </div>
         </div>                
       </div>
 
-      <div class="col-md-6 tickets d-flex flex-column">
-        <div data-ng-if="vm.oneWaySecondColumn.length" data-ng-repeat="ticket in vm.oneWaySecondColumn" class="ticket row d-flex justify-content-between align-items-center">
-          <div class="col-5 d-flex align-items-center">
+      <div class="col-12 col-lg-6 tickets d-flex flex-column">
+         <div data-ng-repeat="ticket in vm.oneWaySecondColumn" class="ticket row d-flex justify-content-between align-items-center">
+          <div class="col-6 col-sm-5 d-flex align-items-center">
             <img class="airlines-logo" src="./" data-ng-src="{{ticket.airline.logo}}" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
             билеты на самолет Алматы — Стамбул по низким ценам онлайн">
-            <div>
+            <div class="d-flex flex-column-reverse flex-sm-column">
               <p>{{ticket.departure_date | date :'MMM d'}}</p>
-              <span>{{vm.trunkName(ticket.airline.name)}}</span>
+              <span class="airlines-title">{{vm.trunkName(ticket.airline.name)}}</span>
             </div>
           </div>
-          <div class="col-3">
+          <div class="col-sm-3 transfer">
             <p>{{vm.timeConversion(ticket.flight_time)}}</p>
             <span>{{vm.stopsFormat(ticket.stops)}}</span>
           </div>
-          <div class="col-4">
+          <div class="col-6 col-sm-4 price">
             <p><b>{{vm.priceConvertion(ticket.price)}} KZT</b></p>
             <span>найден 2 дня назад</span>
           </div>
         </div>                
       </div>
+
     </div>
   </div>
 </section>
 
-<section class="s6 border-top">
+<section data-ng-if="vm.roundTripFirstColumn.length||vm.roundTripSecondColumn.length" class="s6 border-top">
   <div class="container">
-   <h2>Дешевые авиабилеты Алматы — Стамбул в обе сторону</h2>
+   <h2>Дешевые авиабилеты Алматы — Стамбул в обе стороны</h2>
    <h3>Минимальная стоимость билетов на самолет Алматы – Москва в обе стороны – 75 223 тенге. Покупка авиабилета в обе стороны обойдется дешевле, чем покупка двух билетов в одну сторону. Самые дешевые авиабилеты в обе стороны, которые находили посетители santufei, мы собрали в таблицу. Попробуйте поискать билеты на те же даты.</h3>
    <div class="row">
 
-    <div class="col-md-6 tickets d-flex flex-column">
-      <div data-ng-if="vm.roundTripFirstColumn.length" data-ng-repeat="ticket in vm.roundTripFirstColumn" class="ticket row d-flex justify-content-between align-items-center">
-        <div class="col-5 d-flex align-items-center">
-          <img class="airlines-logo" src="./" data-ng-src="{{ticket.airline.logo}}" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
-          билеты на самолет Алматы — Стамбул по низким ценам онлайн">
-          <div>
-            <p>{{ticket.departure_date | date :'MMM d'}}</p>
-            <span>{{vm.trunkName(ticket.airline.name)}}</span>
-          </div>
-        </div>
-        <div class="col-3">
-          <p>{{vm.timeConversion(ticket.flight_time)}}</p>
-          <span>{{vm.stopsFormat(ticket.stops)}}</span>
-        </div>
-        <div class="col-4">
-          <p><b>{{vm.priceConvertion(ticket.price)}} KZT</b></p>
-          <span>найден 2 дня назад</span>
-        </div>
-      </div>                
-    </div>
 
-    <div class="col-md-6 tickets d-flex flex-column">
-      <div data-ng-if="vm.roundTripSecondColumn.length" data-ng-repeat="ticket in vm.roundTripSecondColumn" class="ticket row d-flex justify-content-between align-items-center">
-        <div class="col-5 d-flex align-items-center">
-          <img class="airlines-logo" src="./" data-ng-src="{{ticket.airline.logo}}" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
-          билеты на самолет Алматы — Стамбул по низким ценам онлайн">
-          <div>
-            <p>{{ticket.departure_date | date :'MMM d'}}</p>
-            <span>{{vm.trunkName(ticket.airline.name)}}</span>
+      <div class="col-12 col-lg-6 tickets d-flex flex-column">
+        <div data-ng-repeat="ticket in vm.roundTripFirstColumn" class="ticket row d-flex justify-content-between align-items-center">
+          <div class="col-6 col-sm-5 d-flex align-items-center">
+            <img class="airlines-logo" src="./" data-ng-src="{{ticket.airline.logo}}" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
+            билеты на самолет Алматы — Стамбул по низким ценам онлайн">
+            <div class="d-flex flex-column-reverse flex-sm-column">
+              <p>{{ticket.departure_date | date :'MMM d'}}</p>
+              <span class="airlines-title">{{vm.trunkName(ticket.airline.name)}}</span>
+            </div>
           </div>
-        </div>
-        <div class="col-3">
-          <p>{{vm.timeConversion(ticket.flight_time)}}</p>
-          <span>{{vm.stopsFormat(ticket.stops)}}</span>
-        </div>
-        <div class="col-4">
-          <p><b>{{vm.priceConvertion(ticket.price)}} KZT</b></p>
-          <span>найден 2 дня назад</span>
-        </div>
-      </div>                
-    </div>
+          <div class="col-sm-3 transfer">
+            <p>{{vm.timeConversion(ticket.flight_time)}}</p>
+            <span>{{vm.stopsFormat(ticket.stops)}}</span>
+          </div>
+          <div class="col-6 col-sm-4 price">
+            <p><b>{{vm.priceConvertion(ticket.price)}} KZT</b></p>
+            <span>найден 2 дня назад</span>
+          </div>
+        </div>                
+      </div>
+
+      <div class="col-12 col-lg-6 tickets d-flex flex-column">
+         <div data-ng-repeat="ticket in vm.roundTripSecondColumn" class="ticket row d-flex justify-content-between align-items-center">
+          <div class="col-6 col-sm-5 d-flex align-items-center">
+            <img class="airlines-logo" src="./" data-ng-src="{{ticket.airline.logo}}" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
+            билеты на самолет Алматы — Стамбул по низким ценам онлайн">
+            <div class="d-flex flex-column-reverse flex-sm-column">
+              <p>{{ticket.departure_date | date :'MMM d'}}</p>
+              <span class="airlines-title">{{vm.trunkName(ticket.airline.name)}}</span>
+            </div>
+          </div>
+          <div class="col-sm-3 transfer">
+            <p>{{vm.timeConversion(ticket.flight_time)}}</p>
+            <span>{{vm.stopsFormat(ticket.stops)}}</span>
+          </div>
+          <div class="col-6 col-sm-4 price">
+            <p><b>{{vm.priceConvertion(ticket.price)}} KZT</b></p>
+            <span>найден 2 дня назад</span>
+          </div>
+        </div>                
+      </div>
+
   </div>
 </div>
 </section>
@@ -272,7 +286,7 @@
 <section class="s7 bg-gray">
  <div class="container">
    <h2>Погода в Стамбуле</h2>
-   <div class="d-flex justify-content-between">
+   <div class="d-flex">
      <div class="day today">
        <div class="header">
         <span>Сегодня,</span> 28 августа
@@ -423,7 +437,7 @@
 </div>
 </div>
 <div class="months d-flex text-center">
- <div class="col-1 month" data-ng-repeat="month in vm.months">
+ <div class="month" data-ng-repeat="month in vm.months">
   <p>{{month}}</p>
   <span>{{$index}}°</span>
 </div>             
@@ -431,45 +445,35 @@
 </div>
 </section>
 
-<section class="s8">
+<section data-ng-if="vm.airlines.length" class="s8">
   <div class="container">
     <h2>Авиакомпании, обслуживающие маршрут Алматы — Станбул</h2>
-    <p>Мы собрали список авиакомпаний, которые летают по направлению Алматы — Шымкент. Диаграмма показывает, как изменяется стоимость перелета в одну сторону в зависимости от выбора авиакомпании.</p>
-    
+    <p>Мы собрали список авиакомпаний, которые летают по направлению Алматы — Шымкент. Диаграмма показывает, как изменяется стоимость перелета в одну сторону в зависимости от выбора авиакомпании.</p> 
+
     <div data-ng-repeat="airline in vm.airlines" class="row d-flex justify-content-between align-items-center mt-4">
-      <div class="col-md-3">
+      <div class="col-12 col-sm-4 col-sm-3">
         <img class="airlines-logo" src="./" data-ng-src="{{airline.logo}}" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
         билеты на самолет Алматы — Стамбул по низким ценам онлайн">
         <a href="">{{airline.title}}</a>
       </div>
-      <div class="col-md-6 progress">
+      <div class="col-sm-5 col-lg-6 progress">
         <div data-ng-style="{width:airline.percent+'%'}" class="progress-bar"></div>
       </div>
-      <b class="col-md-2 offset-md-1">от {{vm.priceConvertion(airline.price)}} KZT</b>
+      <b class="price col-sm-3 col-lg-2 offset-lg-1"">от {{vm.priceConvertion(airline.price)}} KZT</b>
     </div>      
   </div>
 </section>
 
-<section class="s9 border-top">
+<section ng-if="vm.directions.city_a_airports.length || vm.directions.city_b_airports.length"  class="s9 border-top">
   <div class="container">
 
     <h2>Аэропорты, обслуживающие маршрут Алматы — Стамбул</h2>
     <p>Маршрут обслуживают следующие аэропорты:</p>
     <div  class="row">
-      <div class="col-md-6">
-        <h3>Алматы</h3>
-        <div ng-if="vm.directions.city_a_airports.length" data-ng-repeat="airport in vm.directions.city_a_airports" class="airport d-flex justify-content-between align-items-center">
-          <div>
-            <a href="">{{airport.name_text}}</a>
-            <span class="city-code">{{airport.code}}</span>
-          </div>
-          <p>{{airport.distance_text}}</p>
-        </div>
 
-      </div>
-      <div class="col-md-6">
-        <h3>Стамбул</h3>
-        <div ng-if="vm.directions.city_b_airports.length" data-ng-repeat="airport in vm.directions.city_b_airports" class="airport d-flex justify-content-between align-items-center">
+      <div class="col-12 col-lg-6">
+        <h3>Алматы</h3>
+        <div data-ng-repeat="airport in vm.directions.city_a_airports" class="airport d-flex justify-content-between align-items-center">
           <div>
             <a href="">{{airport.name_text}}</a>
             <span class="city-code">{{airport.code}}</span>
@@ -477,21 +481,32 @@
           <p>{{airport.distance_text}}</p>
         </div>
       </div>
+
+      <div class="col-12 col-lg-6">
+        <h3>Стамбул</h3>
+        <div data-ng-repeat="airport in vm.directions.city_b_airports" class="airport d-flex justify-content-between align-items-center">
+          <div>
+            <a href="">{{airport.name_text}}</a>
+            <span class="city-code">{{airport.code}}</span>
+          </div>
+          <p>{{airport.distance_text}}</p>
+        </div>
+      </div>
+
     </div>
   </div>
-
 </section>
 
 <div class="s10 border-top">
   <div class="container">
     <p>Подписывайтесь на свежие новости</p>
-    <div class="d-flex justify-content-between">
-      <form >
+    <div class="d-flex flex-sm-column flex-lg-row justify-content-between">
+      <form class="s10-form">
         <input type="text" placeholder="Ваше имя">
         <input type="text" placeholder="Ваш e-mail">
-        <button class="btn">Подписаться</button>
+        <input class="btn subscribe" value="Подписаться" type="button">
       </form>
-      <div class="socials">
+      <div class="socials mt-sm-4 mt-lg-0">
         <a href=""><img width="45" height="45" src="assets/images/facebook.svg" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
           билеты на самолет Алматы — Стамбул по низким ценам онлайн"></a>
           <a href=""><img width="45" height="45" src="assets/images/vk.svg" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
@@ -506,51 +521,54 @@
       <div class="s11 border-top">
         <div class="container">
           <div class="row">
-            <div class="col-md-2">
+            <div class="col-6 mb-5 mb-sm-0 col-sm-3 col-lg-2">
               <b>Santufei</b>
-              <ul class="mt-3">
+              <ul class="mt-2 mt-lg-3">
                 <li><a href="">О компании</a></li>
                 <li><a href="">Новости</a></li>
                 <li><a href="">Направления</a></li>
                 <li><a href="">Для бизнеса</a></li>
               </ul>
             </div>
-            <div class="col-md-2">
+            <div class="col-6 mb-5 mb-sm-0 col-sm-3 col-lg-2">
               <b>Сервисы</b>
-              <ul class="mt-3">
+              <ul class="mt-2 mt-lg-3">
                 <li><a href="">Авивабилеты</a></li>
                 <li><a href="">Билеты на поезд</a></li>
                 <li><a href="">Отели</a></li>
                 <li><a href="">Турагенствам</a></li>
               </ul>
             </div>
-            <div class="col-md-2">
+            <div class="col-6 mb-5 mb-sm-0 col-sm-3 col-lg-2">
               <b>Обратная связь</b>
-              <ul class="mt-3">
+              <ul class="mt-2 mt-lg-3">
                 <li><a href="">Помощь</a></li>
                 <li><a href="">Контакты</a></li>
               </ul>
             </div>
-            <div class="col-md-2">
+            <div class="col-6 mb-5 mb-sm-0 col-sm-3 col-lg-2">
               <b>Безопасность</b>
-              <ul class="mt-3">
+              <ul class="mt-2 mt-lg-3">
                 <li><a href="">Лицензионное соглашение</a></li>
                 <li><a href="">Публичная офера</a></li>
               </ul>
             </div>
-            <div class="col-md-3 offset-md-1 text-center download">
+            <div class="col-lg-3 offset-lg-1 mt-sm-4 mt-lg-0 text-center text-sm-left text-lg-center download">
               <b>Скачать приложение</b>
-              <div class="d-flex justify-content-center">
-                <a href=""><img src="assets/images/get-appstore.svg" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
-                  билеты на самолет Алматы — Стамбул по низким ценам онлайн"></a>
-                  <a href=""><img src="assets/images/get-playmarket.svg" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
+              <div class="d-flex flex-column flex-sm-row flex-lg-column">
+
+                <div class="d-flex justify-content-center">
+                  <a href=""><img class="appstore" src="assets/images/get-appstore.svg" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
                     билеты на самолет Алматы — Стамбул по низким ценам онлайн"></a>
-                  </div>
-                  <div class="d-flex justify-content-center">
-                    <img src="assets/images/verified_by_visa.svg" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
-                    билеты на самолет Алматы — Стамбул по низким ценам онлайн">
-                    <img src="assets/images/securecode.svg" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
-                    билеты на самолет Алматы — Стамбул по низким ценам онлайн">
+                    <a href=""><img class="playmarket" src="assets/images/get-playmarket.svg" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
+                      билеты на самолет Алматы — Стамбул по низким ценам онлайн"></a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                      <img src="assets/images/verified_by_visa.svg" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
+                      билеты на самолет Алматы — Стамбул по низким ценам онлайн">
+                      <img src="assets/images/securecode.svg" alt="Дешевые авиабилеты Алматы — Стамбул от 48 670 тенге,
+                      билеты на самолет Алматы — Стамбул по низким ценам онлайн">
+                    </div>
                   </div>
                 </div>
               </div>
@@ -560,7 +578,7 @@
           <div class="s12 bg-gray border-top">
             <div class="container">
               <div class="row">
-                <div class="col-md-2">
+                <div class="col-18 col-lg-2">
                   <b>Страны</b>
                   <ul class="mt-3">
                     <li><a href="">Россия</a></li>
@@ -581,7 +599,7 @@
                     <li><a href="">Все страны</a></li>
                   </ul>
                 </div>
-                <div class="col-md-2">
+                <div class="col-18 col-lg-2">
                   <b>Города</b>
                   <ul class="mt-3">
                     <li><a href="">Москва</a></li>
@@ -602,7 +620,7 @@
                     <li><a href="">Все страны</a></li>
                   </ul>
                 </div>
-                <div class="col-md-2">
+                <div class="col-18 col-lg-2">
                   <b>Авиакомпании</b>
                   <ul class="mt-3">
                     <li><a href="">Air Berlin</a></li>
@@ -623,7 +641,7 @@
                     <li><a href="">Все страны</a></li>
                   </ul>
                 </div>
-                <div class="col-md-3">
+                <div class="col-18 col-lg-3">
                   <b>Аэропорты</b>
                   <ul class="mt-3">
                     <li><a href="">Агадир</a></li>
@@ -644,7 +662,7 @@
                     <li><a href="">Все страны</a></li>
                   </ul>
                 </div>
-                <div class="col-md-3 d-flex flex-column">
+                <div class="col-26 col-lg-3 d-flex flex-column">
                   <b >Направления</b>
                   <ul class="mt-3">
                     <li><a href="">Москва — Санкт-Петербург</a></li>
@@ -673,19 +691,28 @@
           <footer>
             <div class="container d-flex justify-content-between align-items-center">
               <p>© 2002-2016 www.santufei.com</p>
-              <ul class="">
-                <li><a href="" target="_blank" class="_forbes" rel="nofollow"><img width="74"  src="assets/images/forbes.png" alt="Forbes"></a></li>
-                <li><a href="" target="_blank" class="_kapital" rel="nofollow"><img width="101"  src="assets/images/kapital.png" alt="Forbes"></a></li>
-                <li><a href="" target="_blank" class="_bnews" rel="nofollow"><img width="122" src="assets/images/bnews.png" alt="Forbes"></a></li>
-                <li><a href="" target="_blank" class="_cursiv" rel="nofollow"><img width="99" src="assets/images/kursiv.png" alt="Forbes"></a></li>
-                <li><a href="" target="_blank" class="_village" rel="nofollow"><img width="82" src="assets/images/theVillage.png" alt="Forbes"></a></li>
+              <ul class="d-flex flex-wrap flex-sm-nowrap align-items-center justify-content-between">
+                <li><a href="" target="_blank" class="forbes" rel="nofollow"><img width="74"  src="assets/images/forbes.png" alt="Forbes"></a></li>
+                <li><a href="" target="_blank" class="kapital" rel="nofollow"><img width="101"  src="assets/images/kapital.png" alt="Forbes"></a></li>
+                <li><a href="" target="_blank" class="bnews" rel="nofollow"><img width="122" src="assets/images/bnews.png" alt="Forbes"></a></li>
+                <li><a href="" target="_blank" class="cursiv" rel="nofollow"><img width="99" src="assets/images/kursiv.png" alt="Forbes"></a></li>
+                <li><a href="" target="_blank" class="village" rel="nofollow"><img width="82" src="assets/images/theVillage.png" alt="Forbes"></a></li>
               </ul>
             </div>
           </footer>
         </div>
 
-        <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
         <script src="bower_components/scripts.min.js"></script>
+
+<!--         <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/daterangepicker/moment.min.js"></script>
+        <script src="bower_components/daterangepicker/daterangepicker.js"></script>
+        <script src="bower_components/angular-strap/dist/angular-strap.min.js"></script>
+        <script src="bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+        <script src="index.module.js"></script>
+        <script src="index.controller.js"></script> -->
+
 
       </body>
       </html>

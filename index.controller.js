@@ -60,6 +60,10 @@ angular.module('myApp').controller('mainCtrl',['$http','$scope',function ($http,
 				console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
 			$scope.$apply()
 		});
+
+		$('.toggle').click(function() {
+				$('#navbarCollapse').toggle('fast');
+		})
 	});
 
 	vm.searchTickets()
