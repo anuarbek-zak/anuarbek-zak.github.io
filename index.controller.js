@@ -14,7 +14,7 @@ angular.module('myApp').controller('mainCtrl',['$http','$scope',function ($http,
 	vm.date2 = ''
 
 	vm.searchTickets = function(){
-		$http.get("http://test.santufei.com/api/v1/content/directions?city_a="+vm.cityFrom.code+"&city_b="+vm.cityTo.code)
+		$http.get("https://test.santufei.com/api/v1/content/directions?city_a="+vm.cityFrom.code+"&city_b="+vm.cityTo.code)
 		.then(function(response) {
 			vm.directions = response.data.directions[0]
 			console.log(vm.directions);
