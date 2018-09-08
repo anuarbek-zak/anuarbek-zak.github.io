@@ -1,0 +1,50 @@
+$('.slider').slick({
+  autoplay:false,
+  arrows: true,
+  slidesToShow: 1,
+});
+
+new WOW().init();
+
+$('.order').click(function() {  
+  $('html, body').animate({scrollTop: $('.s5').offset().top+100}, 1000);
+  return false;
+})
+
+$('.sky').click(function() {
+  var self = $(this)
+  $('.answer').animate({'opacity':0},500,function(){
+    $('.answer').text(self.data('text')).animate({'opacity':1},500);
+  })
+})
+
+$(".sendToMail").click(function (e) {
+  e.preventDefault();
+  var data = {};
+  var name = $(this).closest('.clientInfo').find(".clientName").val();
+  var phone = $(this).closest('.clientInfo').find(".clientPhone").val();
+
+  if(name==""||phone=="") {
+    $(".error").show();
+    return;
+  }
+  data.setFrom = 'danastroy12@gmail.com';
+  data.addAddress = 'danastroy12@gmail.com';
+  data.subject = 'Письмо с сайта';
+  data.username = "danastroy12@gmail.com";
+  data.password = "20iborub";
+  data.msg = "Пришла завяка с сайта от "+name+" с номером "+phone;
+  $.ajax({
+    type: 'POST',
+    url: './phpmailer/mailer.php',
+    data: data,
+    success: function(data) {
+     $('.afterSended').removeClass('d-none')
+   },
+   error: function(xhr, status, error) {
+   }
+ });
+
+  $(".congrats").show();
+  return false;
+});
