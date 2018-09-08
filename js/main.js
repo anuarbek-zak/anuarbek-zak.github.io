@@ -7,9 +7,17 @@ $('.slider').slick({
 new WOW().init();
 
 $('.order').click(function() {  
-  $('html, body').animate({scrollTop: $('.s5').offset().top+100}, 1000);
-  return false;
+  scrollTo('.s5',100)
 })
+$('.watchCourses').click(function(e) {  
+  e.preventDefault()
+  scrollTo('.s6',0)
+})
+
+function scrollTo(blok,offsetTop) {
+ $('html, body').animate({scrollTop: $(blok).offset().top+offsetTop}, 1000);
+  return false;
+}
 
 $('.sky').click(function() {
   var self = $(this)
