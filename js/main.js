@@ -13,6 +13,11 @@ $('.watchCourses').click(function(e) {
   e.preventDefault()
   scrollTo('.s6',0)
 })
+$('.sky').click(function(e) {
+  $('.sky').removeClass('active');
+  $(this).addClass('active')  
+  scrollTo('.answer',-100)
+})
 
 function scrollTo(blok,offsetTop) {
  $('html, body').animate({scrollTop: $(blok).offset().top+offsetTop}, 1000);

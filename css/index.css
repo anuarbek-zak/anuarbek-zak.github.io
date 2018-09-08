@@ -448,7 +448,7 @@ h3{
 .s5{
   background-image: url(../assets/img/blok-5.png);
   position: relative;
-  padding:130px 0 250px;
+  padding:170px 0;
 }
 
 .s5 h3{
@@ -707,9 +707,9 @@ h3{
 }
 
 .sky{
-  width: 221px;
-  height: 129px;
-  background-size: contain;
+  width: 220px;
+  height: 130px;
+  background-size:100% 95%;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -722,6 +722,16 @@ h3{
   font-weight: bold;
   text-align: center;
   cursor: pointer;
+  transition: .5s
+}
+
+.sky:hover{
+  transform: translateY(-15px);
+   color: #09f;
+}
+
+.sky.active{
+  color: #09f;
 }
 
 .sky p{
@@ -745,13 +755,8 @@ h3{
 }
 
 .sky.sky-big{
-  width: 273px;
+  width: 300px;
   height: 160px;
-}
-
-.sky.sky-small{
-  width: 161px;
-  height: 94px;
 }
 
 .s10 .answer{
