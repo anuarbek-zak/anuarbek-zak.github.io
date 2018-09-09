@@ -25,6 +25,7 @@ $('.my-card .descr').each(function() {
     $(this).find('.btn').css('background-color',color)
 })
 
+
 function scrollTo(blok,offsetTop) {
  $('html, body').animate({scrollTop: $(blok).offset().top+offsetTop}, 1000);
   return false;
