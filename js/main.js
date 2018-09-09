@@ -19,6 +19,12 @@ $('.sky').click(function(e) {
   scrollTo('.answer',-100)
 })
 
+$('.my-card .descr').each(function() {
+  var color = $(this).data('color')
+    $(this).find('.price').css('color',color)
+    $(this).find('.btn').css('background-color',color)
+})
+
 function scrollTo(blok,offsetTop) {
  $('html, body').animate({scrollTop: $(blok).offset().top+offsetTop}, 1000);
   return false;

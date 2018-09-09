@@ -67,12 +67,6 @@
 		background-size: 40px;
 		padding: 0 45px;
 	}
-	.my-card{
-		height: 650px;
-	}
-	.my-card .descr{
-		margin-top: 300px;
-	}
 	.s8 .comment{
 		font-size: 1.3rem;
 	}
@@ -116,9 +110,6 @@
 	}
 	.s8 .comment{
 		font-size: 1.1rem;
-	}
-	.my-card{
-		height: 600px;
 	}
 	.s8 .slider{
 		background-size: contain;
