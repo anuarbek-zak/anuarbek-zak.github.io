@@ -44,6 +44,16 @@
 }
 
 @media (max-width: 768px) {
+	.modal .form-wrapper h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+	.zvonok{
+		font-size: 1.8rem;
+		padding: 12px 15px
+	}
 	.s1 .container{
 		max-width: 740px
 	}

@@ -41,24 +41,25 @@ $('.sky').click(function() {
 $(".sendToMail").click(function (e) {
   e.preventDefault();
   var data = {};
-  var name = $(this).closest('.clientInfo').find(".clientName").val();
-  var phone = $(this).closest('.clientInfo').find(".clientPhone").val();
+  var name = $(this).closest('.form-wrapper').find(".clientName").val();
+  var phone = $(this).closest('.form-wrapper').find(".clientPhone").val();
 
   if(name==""||phone=="") {
     $(".error").show();
     return;
   }
-  data.setFrom = 'danastroy12@gmail.com';
-  data.addAddress = 'danastroy12@gmail.com';
+  data.setFrom = 'element.almaty@gmail.com';
+  data.addAddress = 'element.almaty@gmail.com';
   data.subject = 'Письмо с сайта';
-  data.username = "danastroy12@gmail.com";
-  data.password = "20iborub";
+  data.username = "element.almaty@gmail.com";
+  data.password = "element2017";
   data.msg = "Пришла завяка с сайта от "+name+" с номером "+phone;
   $.ajax({
     type: 'POST',
     url: './phpmailer/mailer.php',
     data: data,
     success: function(data) {
+      console.log(data)
      $('.afterSended').removeClass('d-none')
    },
    error: function(xhr, status, error) {
