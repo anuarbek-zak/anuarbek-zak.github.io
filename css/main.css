@@ -4022,11 +4022,22 @@ tbody.collapse.show {
 }
 
 @media (max-width:575px) {
+
+    .main_text h1{
+    font-size: 5vh !important;
+}
+    .main_text h2 {
+    font-size: 3vh !important;
+}
+.pulse-btn .btn{
+    padding: 15px 30px !important;
+}
     .navbar-expand-sm>.container,
     .navbar-expand-sm>.container-fluid {
         padding-right: 0;
         padding-left: 0
     }
+
 }
 
 @media (min-width:576px) {
@@ -4085,6 +4096,7 @@ tbody.collapse.show {
         padding-right: 0;
         padding-left: 0
     }
+
 }
 
 @media (min-width:768px) {
@@ -9468,7 +9480,8 @@ body textarea:required:valid {
 
 body,
 html {
-    height: 100%
+    height: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -9658,7 +9671,7 @@ span.bold_main_text {
     -webkit-background-size: cover;
     background-size: cover;
     background-color: #a6a6a6;
-    background-position: center -18vh !important;
+    background-position: center;
     background-repeat: no-repeat;
     height: 90vh;
     overflow: hidden;
@@ -9688,7 +9701,9 @@ span.bold_main_text {
 .main_text h1 {
     font-size: 7.2vh;
     letter-spacing: 4px;
-    font-weight: 600
+    font-weight: 600;
+    padding:0 20px;
+
 }
 
 .main_text h2 {
@@ -9707,6 +9722,11 @@ span.bold_main_text {
     line-height: 1.5;
     font-weight: 500;
     color: #5e5e5e
+}
+.block_about q {
+    font-size: 1.1em;
+    line-height: 1.7;
+
 }
 
 .block_about img {
@@ -10421,7 +10441,7 @@ span.bold_main_text {
 }
 
 .testimonials {
-    background: url(../img/testi_bg.jpg) center no-repeat;
+    background-color: #f5f5f5
     color: #fff;
     -webkit-background-size: cover;
     background-size: cover
@@ -10626,9 +10646,7 @@ span.bold_main_text {
     right: 20px;
     background: #2196f3;
     color: #fff;
-    font-size: 28px;
-    font-weight: bold;
-    padding-top: 3px;    
+    padding-top: 10px;    
     width: 50px;
     height: 50px;
     text-align: center;
