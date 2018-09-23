@@ -9657,14 +9657,12 @@ span.bold_main_text {
 .main_bg {
     -webkit-background-size: cover;
     background-size: cover;
-    background-position: center;
+    background-color: #a6a6a6;
+    background-position: center -18vh !important;
     background-repeat: no-repeat;
     height: 90vh;
-    overflow: hidden
-}
-
-.main_bg {
-    background: url(../img/main_bg.JPG);
+    overflow: hidden;
+    background-image: url(../img/main_bg.JPG);
     position: relative
 }
 
