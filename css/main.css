@@ -9614,8 +9614,8 @@ span.bold_main_text {
 }
 
 .phone_menu {
-    background: #2196f3;
-    display: none
+    display: none;
+    background-color: #000
 }
 
 .phone_menu ul {
@@ -9623,7 +9623,7 @@ span.bold_main_text {
 }
 
 .phone_menu ul li {
-    border-bottom: 1px solid #5ca6e0
+    border-bottom: 1px solid #ccc
 }
 
 .phone_menu ul li a {
@@ -9657,7 +9657,7 @@ span.bold_main_text {
 .main_bg {
     -webkit-background-size: cover;
     background-size: cover;
-    background-position: center -18vh !important;
+    background-position: center;
     background-repeat: no-repeat;
     height: 90vh;
     overflow: hidden
@@ -10179,6 +10179,7 @@ span.bold_main_text {
     background-image: url(../img/team1.JPG);
     background-size: cover;
     background-position: center;
+    height: 100%;
 }
 
 .education .time_block:hover span.bold_main_text{
@@ -10749,6 +10750,12 @@ span.bold_main_text {
     .time_block:after {
         display: none
     }
+    .education .time_block {
+        height: auto;
+    }
+    .education .time_block .bg-img{
+        height: 350px;
+    }
 }
 
 @media only screen and (max-width:480px) {
@@ -10772,5 +10779,8 @@ span.bold_main_text {
     .portfolio .img_wrapper {
         width: 320px;
         height: auto
+    }
+    .main_article p{
+        padding: 0 10px;
     }
 }
