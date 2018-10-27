@@ -89,16 +89,16 @@ a {
   top: 0;
   width: 100%;
   z-index: 100000;
-  background-color: #006cff; }
+  background-color: #212529; }
 
 .medilife-load {
   -webkit-animation: 2000ms linear 0s normal none infinite running medilife-load;
   animation: 2000ms linear 0s normal none infinite running medilife-load;
   background: transparent;
   border-color: #ffffff;
-  border-top-color: #006cff;
-  border-left-color: #006cff;
-  border-right-color: #006cff;
+  border-top-color: #212529;
+  border-left-color: #212529;
+  border-right-color: #212529;
   border-radius: 50%;
   border-style: solid;
   border-width: 2px;
@@ -221,7 +221,7 @@ img {
   height: 800px !important; }
 
 #scrollUp {
-  background-color: #006cff;
+  background-color: #212529;
   border-radius: 50%;
   bottom: 60px;
   right: 60px;
@@ -292,7 +292,7 @@ img {
 .medilife-btn {
   display: inline-block;
   color: #ffffff;
-  background-color: #006cff;
+  background-color: #ff0000;
   padding: 5px 100px 5px 50px;
   height: 50px;
   line-height: 42px;
@@ -324,15 +324,15 @@ img {
     color: #ffffff; }
   .medilife-btn:hover span, .medilife-btn:focus span {
     color: #ffffff;
-    background-color: #006cff; }
+    background-color: #212529; }
   .medilife-btn.btn-2 {
     background-color: #081f3e;
     color: #ffffff; }
     .medilife-btn.btn-2 span {
       color: #ffffff;
-      background-color: #006cff; }
+      background-color: #212529; }
     .medilife-btn.btn-2:hover, .medilife-btn.btn-2:focus {
-      background-color: #006cff;
+      background-color: #212529;
       color: #ffffff; }
     .medilife-btn.btn-2:hover span, .medilife-btn.btn-2:focus span {
       color: #ffffff;
@@ -341,7 +341,7 @@ img {
     background-color: #ffffff;
     color: #081f3e;
     border: 2px solid;
-    border-color: #006cff; }
+    border-color: #212529; }
     .medilife-btn.btn-3 span {
       top: -2px;
       right: -2px; }
@@ -349,9 +349,9 @@ img {
     background-color: #ffffff;
     color: #081f3e;
     border: 2px solid;
-    border-color: #006cff; }
+    border-color: #212529; }
     .medilife-btn.btn-4 span {
-      background-color: #006cff;
+      background-color: #212529;
       top: -2px;
       right: -2px; }
 
@@ -373,7 +373,7 @@ img {
   .medilife-appoint-btn span {
     font-weight: 700; }
   .medilife-appoint-btn:hover, .medilife-appoint-btn:focus {
-    color: #006cff;
+    color: #212529;
     background-color: #ffffff;
     box-shadow: none;
     font-weight: 500; }
@@ -396,7 +396,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #006cff;
+    background-color: #212529;
     opacity: 0.85;
     content: ''; }
 
@@ -457,7 +457,7 @@ img {
     margin-bottom: 0;
     color: #b5b5b5; }
     .top-header-area p span {
-      color: #006cff; }
+      color: #212529; }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .top-header-area p {
         font-size: 13px; } }
@@ -472,10 +472,10 @@ img {
 
 .main-header-area {
   width: 100%;
-  height: 110px;
+  height: 100px;
   position: relative;
   z-index: 1;
-  background-color: rgba(0, 108, 255, 0.5);
+  background-color: #fff;
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms; }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -496,16 +496,18 @@ img {
       height: 70px; } }
 
 .header-area .main-menu .nav-link {
-  font-size: 14px;
+  font-size: 16px;
   text-transform: capitalize;
   padding: 10px 20px;
-  color: #ffffff;
-  font-weight: 500;
+  color: #010101;
+  text-transform: uppercase;
+  font-weight: 600;
   margin: 0 1px; }
-  .header-area .main-menu .nav-link:hover {
-    background-color: #006cff; }
-  .header-area .main-menu .nav-link:focus {
-    background-color: #006cff; }
+  .header-area .main-menu .nav-link:hover,
+  .header-area .main-menu .nav-link:focus{
+    text-decoration: underline;
+       }
+
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .header-area .main-menu .nav-link {
       padding: 10px; } }
@@ -519,7 +521,8 @@ img {
       margin: 1px 0; } }
 
 .header-area .main-menu .nav-item.active .nav-link {
-  background-color: #006cff; }
+  background-color: #212529;
+  color: #fff; }
 
 .dropdown-menu.show {
   border: none;
@@ -533,12 +536,12 @@ img {
   color: #5f5f5f;
   text-transform: uppercase; }
   .dropdown-item:hover {
-    color: #006cff;
+    color: #212529;
     font-size: 13px;
     font-weight: 500;
     background-color: #f5f7f9; }
   .dropdown-item:focus {
-    color: #006cff;
+    color: #212529;
     font-size: 13px;
     font-weight: 500;
     background-color: #f5f7f9; }
@@ -546,8 +549,6 @@ img {
 .navbar {
   padding: 0; }
 
-.navbar-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .navbar-toggler {
     margin: 20px 0; } }
@@ -558,7 +559,7 @@ img {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   #medilifeMenu {
     width: 100%;
-    background-color: #081f3e;
+    background-color: #fff;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
     padding: 30px 15px;
     border-radius: 0 0 6px 6px;
@@ -567,7 +568,7 @@ img {
 @media only screen and (max-width: 767px) {
   #medilifeMenu {
     width: 100%;
-    background-color: #081f3e;
+    background-color:#fff;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
     padding: 20px 10px;
     border-radius: 0 0 6px 6px;
@@ -620,7 +621,7 @@ img {
   font-size: 35px; }
   .hero-area .owl-prev:hover,
   .hero-area .owl-next:hover {
-    background-color: #006cff; }
+    background-color: #212529; }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .hero-area .owl-prev,
     .hero-area .owl-next {
@@ -671,7 +672,7 @@ img {
   background-color: #cacaca;
   margin-right: 8px; }
   .hero-area .owl-dot.active {
-    background-color: #006cff; }
+    background-color: #212529; }
 
 /* :: 6.0 Book An Appoinment Area */
 .align-items-stretch {
@@ -712,10 +713,13 @@ textarea {
   z-index: 1;
   margin-top: -65px; }
   .medilife-book-an-appoinment-area .appointment-form-content {
-    background-color: #081f3e; }
-  .medilife-book-an-appoinment-area .medilife-appointment-form {
     background-color: #081f3e;
-    padding: 60px 50px; }
+   }
+  .medilife-book-an-appoinment-area .medilife-appointment-form {
+    background-color: #fff;
+      box-shadow: 0px 5px 36px -8px #ccc;
+    padding:0px 50px 50px 50px;
+ }
     .medilife-book-an-appoinment-area .medilife-appointment-form select {
       border: 2px solid #536174;
       background-color: transparent; }
@@ -730,7 +734,7 @@ textarea {
         margin-top: 15px; } }
   .medilife-book-an-appoinment-area .medilife-contact-info {
     padding: 30px;
-    background-color: #006cff; }
+    background-color: #212529; }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .medilife-book-an-appoinment-area .medilife-contact-info {
         display: -webkit-box;
@@ -797,9 +801,9 @@ textarea {
     .single-service-area .service-content p {
       margin-bottom: 0; }
   .single-service-area:hover .service-icon {
-    background-color: #006cff; }
+    background-color: #212529; }
   .single-service-area:hover .service-content h5 {
-    color: #006cff; }
+    color: #212529; }
 
 /* :: 9.0 Gallery Area CSS */
 .single-gallery-item {
@@ -855,7 +859,7 @@ textarea {
 
 /* :: 11.0 Emergency Area CSS */
 .medilife-emergency-area {
-  background-color: #006cff; }
+  background-color: #212529; }
   .medilife-emergency-area .emergency-content i {
     font-size: 130px;
     color: #ffffff;
@@ -899,21 +903,20 @@ textarea {
 /* :: 12.0 Footer Area CSS */
 
 .footer-area {
-  background-color: #020f20;
+  background-color: #fbfbfb;
   padding-left: 45px;
   padding-right: 45px;
+  border-top: 1px solid #ccc;
    }
-   .footer-area p{
-    color: #ccc;
-   }
+ 
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .footer-area {
       padding-left: 30px;
       padding-right: 30px; } }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .footer-area {
-      padding-left: 15px;
-      padding-right: 15px; } }
+      padding-left: 0px;
+      padding-right: 0px; } }
   @media only screen and (max-width: 767px) {
     .footer-area {
       padding-left: 0;
@@ -942,7 +945,7 @@ textarea {
     display: inline-block; }
 .footer-widget-area .widget-title h6 {
   font-size: 18px;
-  color: #006cff;
+  color: #212529;
   margin-bottom: 50px;
   text-transform: capitalize; }
 .footer-widget-area .widget-single-blog-post {
@@ -986,7 +989,7 @@ textarea {
   right: 0;
   z-index: 9;
   cursor: pointer;
-  background-color: #006cff;
+  background-color: #212529;
   color: #ffffff;
   border: none; }
 .footer-widget-area .footer-newsletter-area p {
@@ -1097,9 +1100,9 @@ textarea {
   .medilife-tabs-content .nav-link:hover, .medilife-tabs-content .nav-link:focus {
     border-color: #ffffff; }
   .medilife-tabs-content .nav-link.active {
-    background-color: #006cff;
+    background-color: #212529;
     color: #ffffff;
-    border-color: #006cff; }
+    border-color: #212529; }
     @media only screen and (max-width: 767px) {
       .medilife-tabs-content .nav-link.active {
         border-color: #ffffff; } }
@@ -1117,7 +1120,7 @@ textarea {
 .medilife-tabs-content .medilife-tab-content {
   margin-top: 1px;
   border: 2px solid;
-  border-color: #006cff;
+  border-color: #212529;
   padding: 70px; }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .medilife-tabs-content .medilife-tab-content {
@@ -1162,7 +1165,7 @@ textarea {
   float: left;
   padding: 70px 40px 100px; }
   .singleServiceArea:first-child {
-    background-color: #006cff; }
+    background-color: #212529; }
   .singleServiceArea:last-child {
     background-color: #081f3e; }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1218,7 +1221,7 @@ textarea {
     margin-bottom: 20px; }
     .single-benefits-area .single-benefits-title i {
       font-size: 50px;
-      color: #006cff; }
+      color: #212529; }
     .single-benefits-area .single-benefits-title h5 {
       font-size: 22px;
       margin: 0 15px; }
@@ -1227,7 +1230,7 @@ textarea {
 .medilife-cta-area {
   position: relative;
   z-index: 1;
-  background-color: #006cff;
+  background-color: #212529;
   padding: 30px 0; }
   .medilife-cta-area .cta-content {
     display: -webkit-box;
@@ -1281,7 +1284,7 @@ textarea {
     .single-blog-area .blog-post-thumbnail .post-date a {
       min-width: 110px;
       height: 35px;
-      background-color: #006cff;
+      background-color: #212529;
       display: block;
       color: #ffffff;
       line-height: 35px;
@@ -1338,7 +1341,7 @@ textarea {
   background-color: transparent;
   border: none;
   font-size: 14px;
-  color: #006cff;
+  color: #212529;
   font-weight: 500;
   padding: 0 15px;
   position: absolute;
@@ -1355,7 +1358,7 @@ textarea {
   font-size: 14px;
   font-weight: 400; }
   .medilife-catagories-card ul li a:hover, .medilife-catagories-card ul li a:focus {
-    color: #006cff; }
+    color: #212529; }
 
 .latest-news-widget-area h5 {
   margin-bottom: 30px; }
@@ -1373,10 +1376,10 @@ textarea {
     font-size: 14px;
     font-weight: 400; }
   .latest-news-widget-area .widget-single-blog-post .widget-post-content:hover a, .latest-news-widget-area .widget-single-blog-post .widget-post-content:focus a {
-    color: #006cff; }
+    color: #212529; }
   .latest-news-widget-area .widget-single-blog-post .widget-post-content p {
     font-size: 12px;
-    color: #006cff;
+    color: #212529;
     margin-bottom: 0;
     font-weight: 500; }
 
@@ -1415,7 +1418,7 @@ textarea {
   border-bottom-right-radius: 0; }
 .pagination .page-item.active .page-link {
   color: #ffffff;
-  background-color: #006cff; }
+  background-color: #212529; }
 .pagination .page-link {
   padding: 0;
   margin-left: 3px;
@@ -1429,7 +1432,7 @@ textarea {
   text-align: center; }
   .pagination .page-link:focus, .pagination .page-link:hover {
     color: #ffffff;
-    background-color: #006cff; }
+    background-color: #212529; }
 
 .post-meta {
   margin-bottom: 30px; }
@@ -1461,7 +1464,7 @@ textarea {
     font-size: 14px;
     margin-bottom: 20px; }
     .single_comment_area .comment-wrapper .comment-content .comment-meta a:hover {
-      color: #006cff; }
+      color: #212529; }
     @media only screen and (max-width: 767px) {
       .single_comment_area .comment-wrapper .comment-content .comment-meta a {
         font-size: 12px; } }
@@ -1527,7 +1530,7 @@ textarea {
 .single-contact {
   margin-bottom: 20px; }
   .single-contact .contact-icon i {
-    color: #006cff;
+    color: #212529;
     font-size: 22px; }
   .single-contact .contact-icon i.fa-mobile {
       font-size: 32px; }
@@ -1544,13 +1547,13 @@ textarea {
     margin-right: 15px;
     color: #b4b4b4; }
     .contact-social-area a:focus, .contact-social-area a:hover {
-      color: #006cff; }
+      color: #212529; }
 
 .googleMap {
   width: 100%;
   height: 600px;
   border-bottom: 5px solid;
-  border-color: #006cff; }
+  border-color: #212529; }
 
 /* :: 21.0 Shortcode Area CSS */
 .elements-title h2 {
@@ -1592,7 +1595,7 @@ textarea {
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
         filter: alpha(opacity=0); }
     .single-accordion h6 a.collapsed {
-      background-color: #006cff;
+      background-color: #212529;
       color: #ffffff; }
       .single-accordion h6 a.collapsed span.accor-close {
         opacity: 0;
@@ -1614,7 +1617,7 @@ textarea {
   text-align: center; }
   .single-cool-fact-area i {
     font-size: 100px;
-    color: #006cff;
+    color: #212529;
     margin-bottom: 30px;
     display: block; }
   .single-cool-fact-area h2 {
@@ -1639,7 +1642,7 @@ textarea {
     transition-duration: 500ms; }
     .all-icons-area .medilife-single-icon i {
       font-size: 50px;
-      color: #006cff;
+      color: #212529;
       display: block;
       margin-bottom: 15px;
       -webkit-transition-duration: 500ms;
@@ -1649,7 +1652,7 @@ textarea {
       -webkit-transition-duration: 500ms;
       transition-duration: 500ms; }
     .all-icons-area .medilife-single-icon:hover, .all-icons-area .medilife-single-icon:focus {
-      background-color: #006cff; }
+      background-color: #212529; }
     .all-icons-area .medilife-single-icon:hover i, .all-icons-area .medilife-single-icon:focus i {
       color: #ffffff; }
     .all-icons-area .medilife-single-icon:hover span, .all-icons-area .medilife-single-icon:focus span {
@@ -1666,3 +1669,48 @@ textarea {
 .navbar-brand img{
   height: 100%;
 }
+
+.first-header{
+  height: 60px;
+  padding: 0 80px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(185,185,185,0)),color-stop(100%, rgba(24,24,24,0.4)));
+  background-image: -moz-linear-gradient(top, rgba(185,185,185,0) 0%,rgba(24,24,24,0.4) 100%);
+  background-image: linear-gradient(to bottom, rgba(185,185,185,0) 0%,rgba(24,24,24,0.4) 100%);
+}
+
+.first-header li{
+margin: 0 15px;
+list-style-type: disc;
+font-size: 14px;
+font-weight: bold;
+color: #fff;
+}
+.first-header li:first-child{
+  list-style-type: none;
+} 
+.first-header li:first-child a{
+font-size: 17px;
+padding-right: 40px;
+border-right: 1px solid #fff;
+margin-right: 20px;
+}
+.first-header li a{
+color: #fff;
+}
+.first-header li a:hover{
+text-decoration: underline;
+}
+.header-area .first-header-collapsed{
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+.header-area .first-header-collapsed .nav-link {
+  font-size: 14px;
+  color: #555;
+  text-transform: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .footer-area .medilife-btn {
+    padding: 0; } }
