@@ -1,0 +1,36 @@
+.product-full-top{
+	max-height: 700px;
+	min-height: 700px;
+}
+
+.product-submenu{
+	top: 160px;
+}
+
+.calc .calc-results .button-outer{
+	margin-top: 45px;
+}
+
+@media (min-width: 1359px){
+	.width-fix{
+		width: 100%
+	}
+	.product-promo .product-promo-block{
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+}
+
+.content-wrap{
+	max-width: none;
+	padding-bottom: 0;
+}
+
+.tenge{
+	font-size: 110px;
+	color: #f00;
+}
+
+.product-promo .product-terms .carterms .term-title{
+	margin-top: 30px;
+}

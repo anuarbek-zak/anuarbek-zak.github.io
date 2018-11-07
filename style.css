@@ -424,7 +424,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(230, 241, 255, 0.5);
+    background-color: rgba(0,0,0, 0.4);
     content: ''; }
 
 .bg-gray {
@@ -589,15 +589,23 @@ img {
       height: 700px; } }
 
 .hero-slides-content h2 {
-  color: #081f3e;
-  font-size: 60px;
+  color: #fff;
+  font-size: 70px;
   margin-bottom: 20px; }
+.hero-slides-content h6{
+  color: #fff;
+  font-size: 20px;
+  margin-top: 20px;
+}
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .hero-slides-content h2 {
       font-size: 40px; } }
   @media only screen and (max-width: 767px) {
     .hero-slides-content h2 {
-      font-size: 24px; } }
+      font-size: 28px; }
+    .hero-slides-content h6 {
+      font-size: 16px; } 
+    }
 .hero-slides-content h5 {
   color: #081f3e;
   font-size: 22px;
@@ -608,20 +616,17 @@ img {
   width: 70px;
   height: 70px;
   position: absolute;
-  top: 50%;
+  top: 35%;
   line-height: 70px;
   text-align: center;
   color: #ffffff;
-  left: 70px;
+  left: 0px;
   margin-top: -35px;
   opacity: 0;
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
-  background-color: #081f3e;
-  font-size: 35px; }
-  .hero-area .owl-prev:hover,
-  .hero-area .owl-next:hover {
-    background-color: #212529; }
+  font-size: 90px; }
+
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .hero-area .owl-prev,
     .hero-area .owl-next {
@@ -1142,14 +1147,14 @@ textarea {
         min-width: 100%;
         margin-right: 0; } }
     .medilife-tabs-content .medilife-tab-content .medilife-tab-text h2 {
-      font-size: 44px;
+      font-size: 25px;
       margin-bottom: 30px; }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         .medilife-tabs-content .medilife-tab-content .medilife-tab-text h2 {
-          font-size: 30px; } }
+          font-size: 24px; } }
       @media only screen and (max-width: 767px) {
         .medilife-tabs-content .medilife-tab-content .medilife-tab-text h2 {
-          font-size: 30px; } }
+          font-size: 22px; } }
   .medilife-tabs-content .medilife-tab-content .medilife-tab-img {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 45%;
@@ -1714,3 +1719,9 @@ text-decoration: underline;
 @media only screen and (max-width: 991px) {
   .footer-area .medilife-btn {
     padding: 0; } }
+
+.medilife-tab-text li{
+ margin:15px 0 15px 30px;
+}
+.medilife-tab-text li::before {content: "✓"; color: red;margin-right: 5px;font-weight: bold;font-size: 20px;}
+
