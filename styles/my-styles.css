@@ -36,6 +36,7 @@
 
 .product-promo .product-terms .carterms .term-title, .product-promo .product-terms .carterms .term-desc{
 	margin-left: 25px;
+	margin-top: 0;
 }
 
 .product-promo .product-faq .faq-item{
