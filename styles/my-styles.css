@@ -62,8 +62,8 @@
 	height: 50px
 }
 
-.calc-field .form-control{
-	color: #536174;
+.form-control{
+	color: #536174 !important;
 }
 
 .calc .calc-field-content{
@@ -119,6 +119,10 @@
 	height: 100%;
 	background-color: rgba(0,0,0, 0.35);
 	content: '';
+}
+
+.global-wrap{
+	z-index: initial;
 }
 
 @media (min-width: 1359px){

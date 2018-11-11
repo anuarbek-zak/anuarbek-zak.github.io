@@ -29,7 +29,7 @@
     <header class="header-area">
         <div class="first-header d-none d-lg-block">
             <ul class="h-100 d-flex justify-content-end align-items-center">
-                <li><a href="">Заказать звонок</a></li>
+            <li><a href="" data-toggle="modal" data-target="#exampleModal">Заказать звонок</a></li>
                 <li><a href="./">Главная</a></li>
                 <li><a href="faq.html">Вопросы</a></li>
                 <li><a href="payments.html">Способы оплаты</a></li>
@@ -64,7 +64,7 @@
                                             <a class="nav-link" href="">Авто Маркет</a>
                                         </li>
                                         <div class="d-lg-none first-header-collapsed">
-                                           <li class="nav-item">
+                                         <li class="nav-item">
                                             <a class="nav-link" href="contact.html">Заказать звонок</a>
                                         </li>
                                         <li class="nav-item">
@@ -85,6 +85,31 @@
             </div>
         </div>
     </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog mt-5 pt-5" role="document">
+    <div class="modal-content mt-5">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Оставьте свои данные</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <div class="form-group">
+            <input type="text" placeholder="Ваше имя" class="form-control border-top-0 border-right-0 border-left-0" id="recipient-name">
+          </div>
+          <br>
+           <div class="form-group">
+            <input type="text" placeholder="Ваше номер" class="form-control border-top-0 border-right-0 border-left-0" id="recipient-name">
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn medilife-btn">Заказать звонок <span class="fa fa-envelope" style="padding-top: 13px"></span></button>
+      </div>
+    </div>
+  </div>
+</div>
 </header>
 <!-- ***** Header Area End ***** -->
 
@@ -101,7 +126,7 @@
                             <h6 data-animation="fadeInUp" data-delay="400ms"><i class="fa fa-check mr-2"></i> Купите авто уже сегодня!</h6>
                             <h6 data-animation="fadeInUp" data-delay="400ms"><i class="fa fa-check mr-2"></i> Зарегистрируйте автомобиль на свое имя!</h6>
                             <h6 data-animation="fadeInUp" data-delay="400ms"><i class="fa fa-check mr-2"></i> До 80% наличными от стоимости автомобиля!</h6>
-                            <a href="#" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Расчитать <span><i class="fa fa-calculator"></i></span></a>
+                            <a href="auto-leasing.html" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Расчитать <span><i class="fa fa-calculator"></i></span></a>
                         </div>
                     </div>
                 </div>
@@ -117,7 +142,7 @@
                             <h6 data-animation="fadeInUp" data-delay="400ms"><i class="fa fa-check mr-2"></i>Принимаем автомобили с 95 года выпуска!</h6>
                             <h6 data-animation="fadeInUp" data-delay="400ms"><i class="fa fa-check mr-2"></i>С правом вождения и без переоформления</h6>
                             <h6 data-animation="fadeInUp" data-delay="400ms"><i class="fa fa-check mr-2"></i>От 5.94% в месяц без скрытых платежей и комиссии</h6>
-                            <a href="#" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Расчитать <span><i class="fa fa-calculator"></i></span></a>
+                            <a href="auto-zalog.html" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Расчитать <span><i class="fa fa-calculator"></i></span></a>
                         </div>
                     </div>
                 </div>
@@ -133,7 +158,7 @@
                             <h6 data-animation="fadeInUp" data-delay="400ms"><i class="fa fa-check mr-2"></i>Принимаем автомобили с 95 года выпуска!</h6>
                             <h6 data-animation="fadeInUp" data-delay="400ms"><i class="fa fa-check mr-2"></i>С правом вождения и без переоформления</h6>
                             <h6 data-animation="fadeInUp" data-delay="400ms"><i class="fa fa-check mr-2"></i>От 4.58% в месяц без скрытых платежей и комиссии</h6>
-                            <a href="#" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Расчитать <span><i class="fa fa-calculator"></i></span></a>
+                            <a href="refinance.html" class="btn medilife-btn mt-50" data-animation="fadeInUp" data-delay="700ms">Расчитать <span><i class="fa fa-calculator"></i></span></a>
                         </div>
                     </div>
                 </div>
@@ -166,18 +191,18 @@
                                         </div>
                                         <div class="col-12 col-lg-4">
                                             <div class="form-group">
-                                               <button href="#" class="btn medilife-btn mt-50 w-100">Заказать звонок <span><i class="fa fa-phone"></i></span></button>
-                                           </div>
-                                       </div>
-                                   </div>
-                               </form>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </div>
+                                             <button href="#" class="btn medilife-btn mt-50 w-100">Заказать звонок <span><i class="fa fa-phone"></i></span></button>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </form>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
 </div>
 <!-- ***** Book An Appoinment Area End ***** -->
 
@@ -254,7 +279,7 @@
                 <div class="col-12 col-lg-4">
                     <div class="medica-about-content">
                         <h2>Часто задаваемые вопросы</h2>
-                        <a href="#" class="btn medilife-btn mt-50">Узнать больше <span><i class="fa fa-arrow-right"></i></span></a>
+                        <a href="faq.html" class="btn medilife-btn mt-50">Узнать больше <span><i class="fa fa-arrow-right"></i></span></a>
                     </div>
                 </div>
                 <div class="col-12 col-lg-8">
@@ -277,9 +302,9 @@
                             <div class="col-12 col-md-6">
                                 <div class="single-service-area d-flex">
                                     <div class="service-icon">
-                                       <i class="fa fa-usd"></i>
-                                   </div>
-                                   <div class="service-content">
+                                     <i class="fa fa-usd"></i>
+                                 </div>
+                                 <div class="service-content">
                                     <h5>Что такое Автозалог?</h5>
                                     <p>Вам нужны деньги? У вас есть автомобиль? Замечательно! Вы можете получить деньги под залог авто с правом на вождение. Никаких переоформлений машины и кучи документов. Все очень быстро, просто и выгодно! Это займет у вас 40 минут вашего времени и вы будете при деньгах и на колесах!</p>
                                 </div>
@@ -289,11 +314,11 @@
                         <div class="col-12 col-md-6">
                             <div class="single-service-area d-flex">
                                 <div class="service-icon">
-                                   <i class="fa fa-car"></i>
-                               </div>
-                               <div class="service-content">
-                                   <h5>Какие условия у Автоломбарда?</h5>
-                                   <p>Нужно быть гражданином РК, в возрасте от 23 лет и до 65 лет;
+                                 <i class="fa fa-car"></i>
+                             </div>
+                             <div class="service-content">
+                                 <h5>Какие условия у Автоломбарда?</h5>
+                                 <p>Нужно быть гражданином РК, в возрасте от 23 лет и до 65 лет;
                                     Выбрать машину для покупки и договориться с продавцом;
                                     Регион кредитования г. Алматы и Алматинская область;
                                     Автомобиль должен быть зарегистрирован г. Алматы или Алматинской области;
@@ -305,9 +330,9 @@
                             <div class="col-12 col-md-6">
                                 <div class="single-service-area d-flex">
                                     <div class="service-icon">
-                                       <i class="fa fa-thumbs-up"></i>
-                                   </div>
-                                   <div class="service-content">
+                                     <i class="fa fa-thumbs-up"></i>
+                                 </div>
+                                 <div class="service-content">
                                     <h5>Какие условия по Автозалогу?</h5>
                                     <p>Нужно быть гражданином РК, в возрасте от 23 лет и до 65 лет;
                                         Выбрать машину для покупки и договориться с продавцом;
@@ -386,7 +411,7 @@
                         </div>
                         <!-- Post Content -->
                         <div class="post-content">
-                            <a href="#" class="headline">Малик Мухамедгалев</a>
+                            <a href="#" class="headline">Малик Мухамедгалиев</a>
                             <p>Понравилось, хороший выбор, средние цены. Мне работа автомаркета показалась достойной. Добираться к ним не так уж и долго, но зато как попадаешь в автосалон понимаешь что тебе дурного не предложат и помогут выбрать приличное авто. </p>
                         </div>
                     </div>
@@ -398,18 +423,18 @@
 
     <!-- ***** Footer Area Start ***** -->
     <footer class="footer-area section-padding-100">
-     <div class="container">
-         <div class="row">
-             <div class="mb-sm-4 col-lg-4 col-md-3">
-                 <p class="mt-3">Все права защищены &copy;</p>
-             </div>
-             <div class="mb-sm-4 col-lg-4 col-md-5">
-                 <p><i class="mr-3 fa fa-map-marker"></i> Адрес: г. Алматы</p>
-                 <p><i class="mr-3 fa fa-phone"></i>  Телефон: +7 (727) 355-07-73</p>
-                 <p><i class="mr-3 fa fa-envelope"></i>  Почта: mail@gmail.com</p>
-             </div>
-             <div class="mb-sm-4 col-lg-4 col-md-4">
-                 <div class="col-12">
+       <div class="container">
+           <div class="row">
+               <div class="mb-sm-4 col-lg-4 col-md-3">
+                   <p class="mt-3">Все права защищены &copy;</p>
+               </div>
+               <div class="mb-sm-4 col-lg-4 col-md-5">
+                   <p><i class="mr-3 fa fa-map-marker"></i> Адрес: г. Алматы</p>
+                   <p><i class="mr-3 fa fa-phone"></i>  Телефон: +7 (727) 355-07-73</p>
+                   <p><i class="mr-3 fa fa-envelope"></i>  Почта: mail@gmail.com</p>
+               </div>
+               <div class="mb-sm-4 col-lg-4 col-md-4">
+                   <div class="col-12">
                     <div class="form-group">
                         <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="number" id="number" placeholder="Ваш телефон">
                     </div>
