@@ -1,0 +1,144 @@
+body{
+	background-color: #fffdfd;
+	color: #5F6368;
+}
+
+.title{
+	color: #354051;
+	font-weight: bold;
+}
+
+/*-------------- HEADER STYLES ---------------*/
+header{
+	height: 80px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background-color: #fffdfd;
+	z-index: 1;
+}
+
+.logo{
+	font-weight: bolder;
+	color: #354051;
+}
+
+.logo__img{
+	width: 60px;
+}
+
+.links__item{
+	text-transform: uppercase;
+	padding: 20px ;
+	letter-spacing: 0.8px;
+}
+
+.links__link{
+	color: #5F6368;
+}
+/*-------------- HEADER STYLES END---------------*/
+
+/*-------------- HOME STYLES ---------------*/
+.home{
+	padding-top: 180px;
+	height: 100vh;
+	overflow-x: hidden;
+}
+
+.blue-blocks{
+	margin-top: 150px;
+}
+
+.blue-blocks__block{
+	width: 35%;
+	background-color: #36CFD8;
+	height: 110px;
+	box-shadow: -20px 45px 0 #D9F3F8;
+	transform: skew(20deg, 5deg) translate(-20px);
+}
+
+.blue-blocks__block_inv{
+	transform: skew(-20deg, -5deg) translate(20px);
+	box-shadow: 20px 45px 0 #D9F3F8;
+}
+
+.blue-blocks__scroll{
+	margin-top: 50px;
+}
+
+.scroll__img{
+	width: 30px;
+	animation: mouse 1s  infinite alternate;
+}
+
+@-webkit-keyframes mouse {
+	from   { transform: translateY(-2.5px) }
+	to { transform: translateY(2.5px); }
+}
+
+/*-------------- HOME STYLES END---------------*/
+
+/*-------------- FEATURES STYLES ---------------*/
+.features{
+	padding: 50px 0;
+	margin-bottom: -120px;
+}
+.features-list{
+	margin-top: 70px;
+}
+
+.features-list__item .fa{
+	color: #36CFD8;
+	font-size: 1.7rem;
+	margin-bottom: 10px;
+}
+.feature-img-container{
+	position: relative;
+	transform: translateY(-25px);
+}
+
+.feature-img-container__img{
+	width: 100%;
+}
+
+.feature-img-container__block{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 50%;
+	height: 35%;
+	background-color: #FFE0B2;
+	z-index: -1;
+}
+
+.feature-img-container__block_bottom{
+	bottom: -25px;
+	left: -25px;
+}
+.feature-img-container__block_top{
+	top: -25px;
+	right: -25px;
+}
+
+/*-------------- FEATURES STYLES END---------------*/
+
+/*-------------- FEATURES BLOG ---------------*/
+.blog{
+	background-color: #FBF9F9;
+	padding: 200px 0;
+}
+/*-------------- FEATURES BLOG END---------------*/
+
+.btn-light-purple{
+	background-color: #E7D7FB;
+	color: #6002E6;
+	padding: .5rem .75rem;
+}
+
+.btn-purple{
+	background-color: #6002E6;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 1rem 3rem;
+	font-size: 1.3rem;
+}
