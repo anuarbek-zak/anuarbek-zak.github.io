@@ -24,13 +24,14 @@
                 Bubbly
             </a>
             <nav>
-                <ul class="links d-flex align-items-center">
+                <ul class="links d-md-flex align-items-center d-none">
                     <li class="links__item"><a href="" class="links__link">about</a></li>
                     <li class="links__item"><a href="" class="links__link">products</a></li>
                     <li class="links__item"><a href="" class="links__link">contact</a></li>
                     <li class="links__item"><a href="" class="links__link btn btn-light-purple">get started</a></li>
                 </ul>
             </nav>
+            <img width="40" class="d-block d-md-none" src="assets/burgerIcon.png" alt="">
         </div>
     </header>
 
@@ -40,13 +41,13 @@
             <p class="get-started__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque necessitatibus magnam cupiditate facere consequatur modi, obcaecati nostrum harum alias pariatur!</p>
             <button class="btn btn-purple mt-5">get started</button>
         </div>
-        <div class="blue-blocks d-flex justify-content-between aic">
-            <div class="blue-blocks__block"></div>
+        <div class="blue-blocks d-flex justify-content-between">
+            <div class="blue-blocks__block blue-blocks__block_left"></div>
             <div class="blue-blocks__scroll scroll text-center">
                 <img class="scroll__img" src="assets/mouse.svg" alt="">
                 <p class="font-weight-bold mt-2">Scroll</p>
             </div>
-            <div class="blue-blocks__block blue-blocks__block_inv"></div>
+            <div class="blue-blocks__block blue-blocks__block_right"></div>
         </div>
     </section>
 
@@ -75,7 +76,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5 offset-lg-1 feature-img-container">
+                <div class="col-8 offset-2 col-lg-5 offset-lg-1 feature-img-container mt-5 mt-lg-0">
                     <div class="feature-img-container__block feature-img-container__block_top"></div>
                     <img class="feature-img-container__img" src="assets/champagne-bg.jpeg" alt="">
                     <div class="feature-img-container__block feature-img-container__block_bottom"></div>
@@ -149,22 +150,22 @@
     </section>
 
     <footer class="footer">
-        <div class="container d-flex justify-content-between">
+        <div class="container d-flex flex-column align-items-start flex-md-row justify-content-between">
          <nav>
-            <ul class="links d-flex align-items-center pl-0">
-                <li class="links__item pl-0"><a href="" class="links__link links__link_footer">about</a></li>
+            <ul class="links d-flex flex-wrap align-items-center">
+                <li class="links__item"><a href="" class="links__link links__link_footer">about</a></li>
                 <li class="links__item"><a href="" class="links__link links__link_footer">products</a></li>
                 <li class="links__item"><a href="" class="links__link links__link_footer">contact</a></li>
                 <li class="links__item"><a href="" class="links__link links__link_footer">careers</a></li>
             </ul>
         </nav>
-       <nav>
-            <ul class="links d-flex align-items-center">
-                <li class="links__item"><a href="" class="links__link links__link_footer fa fa-twitter"></a></li>
-                <li class="links__item"><a href="" class="links__link links__link_footer fa fa-twitter"></a></li>
-                <li class="links__item"><a href="" class="links__link links__link_footer fa fa-twitter"></a></li>
-                <li class="links__item"><a href="" class="links__link links__link_footer fa fa-twitter"></a></li>
+       <nav class="d-flex flex-column align-items-start align-items-md-end">
+            <ul class="links d-flex align-items-center mb-0">
+                <li class="links__item"><a href="" class="links__link links__link_footer links__link_socials fa fa-twitter"></a></li>
+                <li class="links__item"><a href="" class="links__link links__link_footer links__link_socials fa fa-facebook"></a></li>
+                <li class="links__item pr-0"><a href="" class="links__link links__link_footer links__link_socials fa fa-instagram"></a></li>
             </ul>
+            <p class="text-right">&copy; 2018</p>
         </nav>
     </div>
 </footer>

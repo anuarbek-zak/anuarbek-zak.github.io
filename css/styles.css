@@ -27,6 +27,10 @@ body{
 	width: 60px;
 }
 
+.links{
+	padding-left: 0px;
+}
+
 .links__item{
 	text-transform: uppercase;
 	list-style-type: none;
@@ -47,8 +51,7 @@ body{
 /*-------------- HOME STYLES ---------------*/
 .home{
 	padding-top: 180px;
-	height: 100vh;
-	overflow-x: hidden;
+	/*height: 100vh;*/
 }
 
 .get-started__text{
@@ -59,24 +62,35 @@ body{
 }
 
 .blue-blocks{
-	margin-top: 150px;
+	margin-top: 80px;
+	position: relative;
+	overflow-x: hidden;
+	padding-top: 120px;
 }
 
 .blue-blocks__block{
+		position: absolute;
 	width: 35%;
 	background-color: #36CFD8;
 	height: 110px;
+	top: 20px;
 	box-shadow: -20px 45px 0 #D9F3F8;
-	transform: skew(20deg, 5deg) translate(-20px);
+	transform: skew(20deg, 5deg);
 }
 
-.blue-blocks__block_inv{
-	transform: skew(-20deg, -5deg) translate(20px);
+.blue-blocks__block_left{
+		left: -50px;
+}
+
+.blue-blocks__block_right{
+	right: -50px;
+	transform: skew(-20deg, -5deg);
 	box-shadow: 20px 45px 0 #D9F3F8;
 }
 
 .blue-blocks__scroll{
 	margin-top: 50px;
+	margin: 0 auto;
 }
 
 .scroll__img{
@@ -93,7 +107,7 @@ body{
 
 /*-------------- FEATURES STYLES ---------------*/
 .features{
-	padding: 50px 0;
+	padding: 200px 0 50px 0;
 	margin-bottom: -120px;
 }
 .features-list{
@@ -208,11 +222,18 @@ body{
 .footer{
 	background-color: #36CFD8;
 	padding: 200px 0 30px;
+	color: #354051;
 }
 
 .links__link_footer{
 	color: #354051;
+	padding-left: -0px;
 }
+
+.links__link_socials{
+	font-size: 1.8rem;
+}
+
 /*-------------- FOOTER END---------------*/
 
 .btn-light-purple{
