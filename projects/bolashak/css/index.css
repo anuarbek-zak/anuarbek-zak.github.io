@@ -1,0 +1,19 @@
+.bg-img{
+  color: #fff;
+}
+
+.content{
+  position: relative;
+  z-index: 2;
+}
+
+.main-bg-img{
+  background-image: url(../assets/img/main.jpg);
+  height: 100vh;
+}
+
+.side-block:after{
+  border: 44px solid transparent;
+    border-left: 24px solid #e38800;
+    border-top: 68px solid #e38800;
+}
