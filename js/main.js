@@ -9,7 +9,7 @@
 
   var langDict = {
     'en':{
-      'typedCursor': ["Hello, my name is Anuarbek", "And I can create powerful websites.", "Want more info about me? Please sroll down."],
+      'typedCursor': ["Hello, my name is Anuarbek", "And I can create powerful websites.", "Want more info about me? Please scroll down."],
       'aboutTitle': 'A little bit about myself',
       'aboutDescr': 'I have been doing web development for more then 4,5 years. All my free time I develop in this direction, without stoping to learn something new about web technoligies. <br> And at one point, I realized that I`m ready to create cool web applications that can be benefit for people and company I`m working in. <br>',
       'aboutTable .title':['Position','Email','Address'],
